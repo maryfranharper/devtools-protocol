@@ -333,6 +333,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-PostDataEntry"><span class="domain-dot">Network.</span>PostDataEntry</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-Request"><span class="domain-dot">Network.</span>Request</a>
         
       </div>
@@ -3363,6 +3368,46 @@ module) (0-based).</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-PostDataEntry">
+          <span class="domain-dot">Network.</span>PostDataEntry
+          
+          <a href="#type-PostDataEntry"
+             class="permalink"
+             data-slug="Network.PostDataEntry"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Post data entry for HTTP request</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          bytes
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-Request">
           <span class="domain-dot">Network.</span>Request
           
@@ -3471,6 +3516,21 @@ module) (0-based).</p>
       </div>
     
           
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          postDataEntries
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Network/#type-PostDataEntry class="param-type">PostDataEntry</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Request body elements. This will be converted from base64 to binary</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
         <dt class="param-name monospace optional">
