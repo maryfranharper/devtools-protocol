@@ -140,6 +140,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-getSourceOrderHighlightObjectForTest"><span class="domain-dot">Overlay.</span>getSourceOrderHighlightObjectForTest</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-hideHighlight"><span class="domain-dot">Overlay.</span>hideHighlight</a>
         
       </div>
@@ -161,6 +166,11 @@
       
       <div class="toc-link">
         <a class="monospace" href="#method-highlightRect"><span class="domain-dot">Overlay.</span>highlightRect</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-highlightSourceOrder"><span class="domain-dot">Overlay.</span>highlightSourceOrder</a>
         
       </div>
       
@@ -273,6 +283,11 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-InspectMode"><span class="domain-dot">Overlay.</span>InspectMode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-SourceOrderConfig"><span class="domain-dot">Overlay.</span>SourceOrderConfig</a>
         
       </div>
       
@@ -495,6 +510,67 @@
           
       <div class="details-description">
         <p>Highlight data for the node.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getSourceOrderHighlightObjectForTest">
+          <span class="domain-dot">Overlay.</span>getSourceOrderHighlightObjectForTest
+          
+          <a href="#method-getSourceOrderHighlightObjectForTest"
+             class="permalink"
+             data-slug="Overlay.getSourceOrderHighlightObjectForTest"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>For Source Order Viewer testing.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node to highlight.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          highlight
+        </dt>
+        <dd>
+          <span class="param-type">object</span>
+          
+      <div class="details-description">
+        <p>Source order highlight data for the node id provided.</p>
 
         
       </div>
@@ -875,6 +951,93 @@ objectId must be specified.</p>
           
       <div class="details-description">
         <p>The highlight outline color (default: transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-highlightSourceOrder">
+          <span class="domain-dot">Overlay.</span>highlightSourceOrder
+          
+          <a href="#method-highlightSourceOrder"
+             class="permalink"
+             data-slug="Overlay.highlightSourceOrder"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlights the source order of the children of the DOM node with given id or with the given
+JavaScript object wrapper. Either nodeId or objectId must be specified.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          sourceOrderConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-SourceOrderConfig class="param-type">SourceOrderConfig</a>
+          
+      <div class="details-description">
+        <p>A descriptor for the appearance of the overlay drawing.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node to highlight.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          backendNodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the backend node to highlight.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          objectId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
+          
+      <div class="details-description">
+        <p>JavaScript object id of the node to be highlighted.</p>
 
         
       </div>
@@ -2221,6 +2384,62 @@ user manually inspects an element.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SourceOrderConfig">
+          <span class="domain-dot">Overlay.</span>SourceOrderConfig
+          
+          <a href="#type-SourceOrderConfig"
+             class="permalink"
+             data-slug="Overlay.SourceOrderConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Configuration data for drawing the source order of an elements children.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          parentOutlineColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>the color to outline the givent element in.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          childOutlineColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>the color to outline the child elements in.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
