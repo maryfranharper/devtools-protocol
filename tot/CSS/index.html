@@ -239,6 +239,16 @@ subsequently load the required stylesheet contents using the <code>getStyleSheet
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#method-takeComputedStyleUpdates"><span class="domain-dot">CSS.</span>takeComputedStyleUpdates</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-trackComputedStyleUpdates"><span class="domain-dot">CSS.</span>trackComputedStyleUpdates</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
         <h3>Events</h3>
       <div class="toc-link">
         <a class="monospace" href="#event-fontsUpdated"><span class="domain-dot">CSS.</span>fontsUpdated</a>
@@ -1848,6 +1858,92 @@ instrumentation)</p>
       <div class="details-description">
         <p>Whether rendering of local fonts is enabled.</p>
 
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-takeComputedStyleUpdates">
+          <span class="domain-dot">CSS.</span>takeComputedStyleUpdates
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-takeComputedStyleUpdates"
+             class="permalink"
+             data-slug="CSS.takeComputedStyleUpdates"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Polls the next batch of computed style updates.</p>
+
+        
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodeIds
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>The list of node Ids that have their tracked computed styles updated</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-trackComputedStyleUpdates">
+          <span class="domain-dot">CSS.</span>trackComputedStyleUpdates
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-trackComputedStyleUpdates"
+             class="permalink"
+             data-slug="CSS.trackComputedStyleUpdates"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Starts tracking the given computed styles for updates. The specified array of properties
+replaces the one previously specified. Pass empty array to disable tracking.
+Use takeComputedStyleUpdates to retrieve the list of nodes that had properties modified.
+The changes to computed style properties are only tracked for nodes pushed to the front-end
+by the DOM agent. If no changes to the tracked properties occur after the node has been pushed
+to the front-end, no updates will be issued for the node.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          propertiesToTrack
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSComputedStyleProperty class="param-type">CSSComputedStyleProperty</a> ]</span></span>
+          
+      <div class="details-description">
+        
         
       </div>
     
