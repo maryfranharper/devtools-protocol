@@ -348,6 +348,11 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-LocationRange"><span class="domain-dot">Debugger.</span>LocationRange</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-ScriptPosition"><span class="domain-dot">Debugger.</span>ScriptPosition</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -1926,6 +1931,21 @@ before next pause.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
+        <dt class="param-name monospace optional">
+          skipList
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-LocationRange class="param-type">LocationRange</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>The skipList specifies location ranges that should be skipped on step into.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -1970,6 +1990,26 @@ before next pause.</p>
     
         
         
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          skipList
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-LocationRange class="param-type">LocationRange</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>The skipList specifies location ranges that should be skipped on step over.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
@@ -3850,6 +3890,74 @@ variables as its properties.</p>
       <div class="details-description">
         <p>Line with match content.</p>
 
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-LocationRange">
+          <span class="domain-dot">Debugger.</span>LocationRange
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-LocationRange"
+             class="permalink"
+             data-slug="Debugger.LocationRange"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Location range within one script.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          start
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Debugger/#type-ScriptPosition class="param-type">ScriptPosition</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          end
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Debugger/#type-ScriptPosition class="param-type">ScriptPosition</a>
+          
+      <div class="details-description">
+        
         
       </div>
     
