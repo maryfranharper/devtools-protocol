@@ -161,11 +161,6 @@ corresponding document elements as their child nodes.</p></p>
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#method-getFlattenedDocument"><span class="domain-dot">DOM.</span>getFlattenedDocument</a>
-        
-      </div>
-      
-      <div class="toc-link">
         <a class="monospace" href="#method-getNodeForLocation"><span class="domain-dot">DOM.</span>getNodeForLocation</a>
         
       </div>
@@ -258,6 +253,11 @@ corresponding document elements as their child nodes.</p></p>
       <div class="toc-link">
         <a class="monospace" href="#method-setOuterHTML"><span class="domain-dot">DOM.</span>setOuterHTML</a>
         
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getFlattenedDocument"><span class="domain-dot">DOM.</span>getFlattenedDocument</a>
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
       </div>
       
       <div class="toc-link">
@@ -936,84 +936,6 @@ entire subtree or provide an integer larger than 0.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
-          
-      <div class="details-description">
-        <p>Resulting node.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getFlattenedDocument">
-          <span class="domain-dot">DOM.</span>getFlattenedDocument
-          
-          <a href="#method-getFlattenedDocument"
-             class="permalink"
-             data-slug="DOM.getFlattenedDocument"
-             title="Double click to copy markdown-formatted URL">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Returns the root DOM node (and optionally the subtree) to the caller.</p>
-
-        
-      </div>
-    
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace optional">
-          depth
-        </dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>The maximum depth at which children should be retrieved, defaults to 1. Use -1 for the
-entire subtree or provide an integer larger than 0.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          pierce
-        </dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>Whether or not iframes and shadow roots should be traversed when returning the subtree
-(default is false).</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace ">
-          nodes
-        </dt>
-        <dd>
-          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a> ]</span></span>
           
       <div class="details-description">
         <p>Resulting node.</p>
@@ -2320,6 +2242,86 @@ successfully.</p>
       </dl>
     
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getFlattenedDocument">
+          <span class="domain-dot">DOM.</span>getFlattenedDocument
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+          <a href="#method-getFlattenedDocument"
+             class="permalink"
+             data-slug="DOM.getFlattenedDocument"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the root DOM node (and optionally the subtree) to the caller.
+Deprecated, as it is not designed to work well with the rest of the DOM agent.
+Use DOMSnapshot.captureSnapshot instead.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          depth
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The maximum depth at which children should be retrieved, defaults to 1. Use -1 for the
+entire subtree or provide an integer larger than 0.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          pierce
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether or not iframes and shadow roots should be traversed when returning the subtree
+(default is false).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Resulting node.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
       </div>
     
       <div class="details">
