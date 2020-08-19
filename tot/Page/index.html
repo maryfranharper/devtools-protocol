@@ -587,6 +587,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-CrossOriginIsolatedContextType"><span class="domain-dot">Page.</span>CrossOriginIsolatedContextType</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-FontFamilies"><span class="domain-dot">Page.</span>FontFamilies</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -623,6 +628,11 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-ScreencastFrameMetadata"><span class="domain-dot">Page.</span>ScreencastFrameMetadata</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-SecureContextType"><span class="domain-dot">Page.</span>SecureContextType</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
@@ -5504,6 +5514,36 @@ Example URLs: <a href="http://www.google.com/file.html">http://www.google.com/fi
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
+        <dt class="param-name monospace ">
+          secureContextType
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-SecureContextType class="param-type">SecureContextType</a>
+          
+      <div class="details-description">
+        <p>Indicates whether the main document is a secure context and explains why that is the case.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace ">
+          crossOriginIsolatedContextType
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-CrossOriginIsolatedContextType class="param-type">CrossOriginIsolatedContextType</a>
+          
+      <div class="details-description">
+        <p>Indicates whether this is a cross origin isolated context.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -6173,6 +6213,29 @@ Example URLs: <a href="http://www.google.com/file.html">http://www.google.com/fi
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-CrossOriginIsolatedContextType">
+          <span class="domain-dot">Page.</span>CrossOriginIsolatedContextType
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-CrossOriginIsolatedContextType"
+             class="permalink"
+             data-slug="Page.CrossOriginIsolatedContextType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Indicates whether the frame is cross-origin isolated and why it is the case.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>Isolated</code>, <code>NotIsolated</code>, <code>NotIsolatedFeatureDisabled</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-FontFamilies">
           <span class="domain-dot">Page.</span>FontFamilies
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -6823,6 +6886,29 @@ Example URLs: <a href="http://www.google.com/file.html">http://www.google.com/fi
       
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SecureContextType">
+          <span class="domain-dot">Page.</span>SecureContextType
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-SecureContextType"
+             class="permalink"
+             data-slug="Page.SecureContextType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Indicates whether the frame is a secure context and why it is the case.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>Secure</code>, <code>SecureLocalhost</code>, <code>InsecureScheme</code>, <code>InsecureAncestor</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
