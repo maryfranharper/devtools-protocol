@@ -138,6 +138,11 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#method-queryAXTree"><span class="domain-dot">Accessibility.</span>queryAXTree</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
         
         <h3>Types</h3>
       <div class="toc-link">
@@ -375,6 +380,132 @@ This turns on accessibility for the page, which can impact performance until acc
       <div class="details-description">
         <p>The <code>Accessibility.AXNode</code> for this DOM node, if it exists, plus its ancestors, siblings and
 children, if requested.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-queryAXTree">
+          <span class="domain-dot">Accessibility.</span>queryAXTree
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-queryAXTree"
+             class="permalink"
+             data-slug="Accessibility.queryAXTree"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Query a DOM node&#39;s accessibility subtree for accessible name and role.
+This command computes the name and role for all nodes in the subtree, including those that are
+ignored for accessibility, and returns those that mactch the specified name and role. If no DOM
+node is specified, or the DOM node does not exist, the command returns an error. If neither
+<code>accessibleName</code> or <code>role</code> is specified, it returns all the accessibility nodes in the subtree.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node for the root to query.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          backendNodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the backend node for the root to query.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          objectId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
+          
+      <div class="details-description">
+        <p>JavaScript object id of the node wrapper for the root to query.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          accessibleName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Find nodes with this computed name.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          role
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Find nodes with this computed role.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXNode class="param-type">AXNode</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>A list of <code>Accessibility.AXNode</code> matching the specified attributes,
+including nodes that are ignored for accessibility.</p>
 
         
       </div>
