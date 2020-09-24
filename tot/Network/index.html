@@ -226,6 +226,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-loadNetworkResource"><span class="domain-dot">Network.</span>loadNetworkResource</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-replayXHR"><span class="domain-dot">Network.</span>replayXHR</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -554,6 +559,16 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       
       <div class="toc-link">
         <a class="monospace" href="#type-InterceptionStage"><span class="domain-dot">Network.</span>InterceptionStage</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-LoadNetworkResourceOptions"><span class="domain-dot">Network.</span>LoadNetworkResourceOptions</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-LoadNetworkResourcePageResult"><span class="domain-dot">Network.</span>LoadNetworkResourcePageResult</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
@@ -1880,6 +1895,96 @@ default domain and path values of the created cookie.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-SecurityIsolationStatus class="param-type">SecurityIsolationStatus</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-loadNetworkResource">
+          <span class="domain-dot">Network.</span>loadNetworkResource
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-loadNetworkResource"
+             class="permalink"
+             data-slug="Network.loadNetworkResource"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fetches the resource and returns the content.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Frame id to get the resource for.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          url
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of the resource to get content for.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          options
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-LoadNetworkResourceOptions class="param-type">LoadNetworkResourceOptions</a>
+          
+      <div class="details-description">
+        <p>Options for the request.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          resource
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-LoadNetworkResourcePageResult class="param-type">LoadNetworkResourcePageResult</a>
           
       <div class="details-description">
         
@@ -7157,6 +7262,174 @@ sent. Response will intercept after the response is received.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-LoadNetworkResourceOptions">
+          <span class="domain-dot">Network.</span>LoadNetworkResourceOptions
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-LoadNetworkResourceOptions"
+             class="permalink"
+             data-slug="Network.LoadNetworkResourceOptions"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>An options object that may be extended later to better support CORS,
+CORB and streaming.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          disableCache
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          includeCredentials
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-LoadNetworkResourcePageResult">
+          <span class="domain-dot">Network.</span>LoadNetworkResourcePageResult
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-LoadNetworkResourcePageResult"
+             class="permalink"
+             data-slug="Network.LoadNetworkResourcePageResult"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>An object providing the result of a network resource load.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          success
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          netError
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Optional values used for error reporting.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          netErrorName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          httpStatusCode
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          stream
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">IO.StreamHandle</a>
+          
+      <div class="details-description">
+        <p>If successful, one of the following two fields holds the result.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          headers
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Network.Headers</a>
+          
+      <div class="details-description">
+        <p>Response headers.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
