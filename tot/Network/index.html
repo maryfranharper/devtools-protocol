@@ -612,6 +612,16 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#type-TrustTokenOperationType"><span class="domain-dot">Network.</span>TrustTokenOperationType</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-TrustTokenParams"><span class="domain-dot">Network.</span>TrustTokenParams</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
       </div>
 
       
@@ -5328,6 +5338,22 @@ module) (0-based).</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          trustTokenParams
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TrustTokenParams class="param-type">TrustTokenParams</a>
+          
+      <div class="details-description">
+        <p>Set for requests when the TrustToken API is used. Contains the parameters
+passed by the developer (e.g. via &quot;fetch&quot;) as understood by the backend.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -8029,6 +8055,103 @@ backslash. Omitting is equivalent to &quot;</em>&quot;.</p>
           
       <div class="details-description">
         <p>The encoded certificates.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TrustTokenOperationType">
+          <span class="domain-dot">Network.</span>TrustTokenOperationType
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-TrustTokenOperationType"
+             class="permalink"
+             data-slug="Network.TrustTokenOperationType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>Issuance</code>, <code>Redemption</code>, <code>Signing</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TrustTokenParams">
+          <span class="domain-dot">Network.</span>TrustTokenParams
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-TrustTokenParams"
+             class="permalink"
+             data-slug="Network.TrustTokenParams"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Determines what type of Trust Token operation is executed and
+depending on the type, some additional parameters.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          type
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TrustTokenOperationType class="param-type">TrustTokenOperationType</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          refreshPolicy
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Only set for &quot;srr-token-redemption&quot; type and determine whether
+to request a fresh SRR or use a still valid cached SRR.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>UseCached</code>, <code>Refresh</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          issuers
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
+          
+      <div class="details-description">
+        <p>Origins of issuers from whom to request tokens or redemption
+records.</p>
 
         
       </div>
