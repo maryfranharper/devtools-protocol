@@ -163,6 +163,11 @@
         
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#method-overrideQuotaForOrigin"><span class="domain-dot">Storage.</span>overrideQuotaForOrigin</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
         <h3>Events</h3>
       <div class="toc-link">
         <a class="monospace" href="#event-cacheStorageContentUpdated"><span class="domain-dot">Storage.</span>cacheStorageContentUpdated</a>
@@ -432,6 +437,21 @@
         </dd>
       
         <dt class="param-name monospace ">
+          overrideActive
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether or not the origin has an active storage quota override</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
           usageBreakdown
         </dt>
         <dd>
@@ -658,6 +678,68 @@
           
       <div class="details-description">
         <p>Security origin.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-overrideQuotaForOrigin">
+          <span class="domain-dot">Storage.</span>overrideQuotaForOrigin
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-overrideQuotaForOrigin"
+             class="permalink"
+             data-slug="Storage.overrideQuotaForOrigin"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Override quota for the specified origin</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          origin
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Security origin.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          quotaSize
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>The quota size (in bytes) to override the original quota with.
+If this is called multiple times, the overriden quota will be equal to
+the quotaSize provided in the final call. If this is called without
+specifying a quotaSize, the quota will be reset to the default value for
+the specified origin. If this is called multiple times with different
+origins, the override will be maintained for each origin until it is
+disabled (called without a quotaSize).</p>
 
         
       </div>
