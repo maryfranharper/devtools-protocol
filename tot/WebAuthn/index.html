@@ -198,6 +198,11 @@ API.</p>
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-Ctap2Version"><span class="domain-dot">WebAuthn.</span>Ctap2Version</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-VirtualAuthenticatorOptions"><span class="domain-dot">WebAuthn.</span>VirtualAuthenticatorOptions</a>
         
       </div>
@@ -924,8 +929,46 @@ See <a href="https://w3c.github.io/webauthn/#signature-counter">https://w3c.gith
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          largeBlob
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The large blob associated with the credential.
+See <a href="https://w3c.github.io/webauthn/#sctn-large-blob-extension">https://w3c.github.io/webauthn/#sctn-large-blob-extension</a></p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Ctap2Version">
+          <span class="domain-dot">WebAuthn.</span>Ctap2Version
+          
+          <a href="#type-Ctap2Version"
+             class="permalink"
+             data-slug="WebAuthn.Ctap2Version"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>ctap2_0</code>, <code>ctap2_1</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
@@ -957,6 +1000,21 @@ See <a href="https://w3c.github.io/webauthn/#signature-counter">https://w3c.gith
           
       <div class="details-description">
         
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          ctap2Version
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/WebAuthn/#type-Ctap2Version class="param-type">Ctap2Version</a>
+          
+      <div class="details-description">
+        <p>Defaults to ctap2_0. Ignored if |protocol| == u2f.</p>
+
         
       </div>
     
