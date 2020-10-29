@@ -408,6 +408,16 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-CorsError"><span class="domain-dot">Network.</span>CorsError</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-CorsErrorStatus"><span class="domain-dot">Network.</span>CorsErrorStatus</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-ErrorReason"><span class="domain-dot">Network.</span>ErrorReason</a>
         
       </div>
@@ -2900,6 +2910,21 @@ continueInterceptedRequest call.</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          corsErrorStatus
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CorsErrorStatus class="param-type">CorsErrorStatus</a>
+          
+      <div class="details-description">
+        <p>The reason why loading was blocked by CORS, if any.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
       </dl>
     
         
@@ -4895,6 +4920,82 @@ default domain and path values of the created cookie.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CorsError">
+          <span class="domain-dot">Network.</span>CorsError
+          
+          <a href="#type-CorsError"
+             class="permalink"
+             data-slug="Network.CorsError"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>The reason why request was blocked.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>DisallowedByMode</code>, <code>InvalidResponse</code>, <code>WildcardOriginNotAllowed</code>, <code>MissingAllowOriginHeader</code>, <code>MultipleAllowOriginValues</code>, <code>InvalidAllowOriginValue</code>, <code>AllowOriginMismatch</code>, <code>InvalidAllowCredentials</code>, <code>CorsDisabledScheme</code>, <code>PreflightInvalidStatus</code>, <code>PreflightDisallowedRedirect</code>, <code>PreflightWildcardOriginNotAllowed</code>, <code>PreflightMissingAllowOriginHeader</code>, <code>PreflightMultipleAllowOriginValues</code>, <code>PreflightInvalidAllowOriginValue</code>, <code>PreflightAllowOriginMismatch</code>, <code>PreflightInvalidAllowCredentials</code>, <code>PreflightMissingAllowExternal</code>, <code>PreflightInvalidAllowExternal</code>, <code>InvalidAllowMethodsPreflightResponse</code>, <code>InvalidAllowHeadersPreflightResponse</code>, <code>MethodDisallowedByPreflightResponse</code>, <code>HeaderDisallowedByPreflightResponse</code>, <code>RedirectContainsCredentials</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CorsErrorStatus">
+          <span class="domain-dot">Network.</span>CorsErrorStatus
+          
+          <a href="#type-CorsErrorStatus"
+             class="permalink"
+             data-slug="Network.CorsErrorStatus"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          corsError
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CorsError class="param-type">CorsError</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          failedParameter
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
