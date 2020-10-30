@@ -166,6 +166,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-MemoryDumpLevelOfDetail"><span class="domain-dot">Tracing.</span>MemoryDumpLevelOfDetail</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-StreamCompression"><span class="domain-dot">Tracing.</span>StreamCompression</a>
         
       </div>
@@ -318,6 +323,21 @@
           
       <div class="details-description">
         <p>Enables more deterministic results by forcing garbage collection</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          levelOfDetail
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-MemoryDumpLevelOfDetail class="param-type">MemoryDumpLevelOfDetail</a>
+          
+      <div class="details-description">
+        <p>Specifies level of details in memory dump. Defaults to &quot;detailed&quot;.</p>
 
         
       </div>
@@ -730,6 +750,31 @@ buffer wrapped around.</p>
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MemoryDumpLevelOfDetail">
+          <span class="domain-dot">Tracing.</span>MemoryDumpLevelOfDetail
+          
+          <a href="#type-MemoryDumpLevelOfDetail"
+             class="permalink"
+             data-slug="Tracing.MemoryDumpLevelOfDetail"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Details exposed when memory request explicitly declared.
+Keep consistent with memory_dump_request_args.h and
+memory_instrumentation.mojom</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>background</code>, <code>light</code>, <code>detailed</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
         
         
       </div>
