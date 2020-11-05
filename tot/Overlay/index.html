@@ -262,6 +262,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-FlexContainerHighlightConfig"><span class="domain-dot">Overlay.</span>FlexContainerHighlightConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-GridHighlightConfig"><span class="domain-dot">Overlay.</span>GridHighlightConfig</a>
         
       </div>
@@ -283,6 +288,11 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-InspectMode"><span class="domain-dot">Overlay.</span>InspectMode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-LineStyle"><span class="domain-dot">Overlay.</span>LineStyle</a>
         
       </div>
       
@@ -1737,6 +1747,47 @@ user manually inspects an element.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-FlexContainerHighlightConfig">
+          <span class="domain-dot">Overlay.</span>FlexContainerHighlightConfig
+          
+          <a href="#type-FlexContainerHighlightConfig"
+             class="permalink"
+             data-slug="Overlay.FlexContainerHighlightConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Configuration data for the highlighting of Flex container elements.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          containerBorder
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-LineStyle class="param-type">LineStyle</a>
+          
+      <div class="details-description">
+        <p>The style of the container border</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-GridHighlightConfig">
           <span class="domain-dot">Overlay.</span>GridHighlightConfig
           
@@ -2364,6 +2415,21 @@ user manually inspects an element.</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          flexContainerHighlightConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-FlexContainerHighlightConfig class="param-type">FlexContainerHighlightConfig</a>
+          
+      <div class="details-description">
+        <p>The flex container highlight configuration (default: all transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
       </dl>
     
         
@@ -2459,6 +2525,64 @@ user manually inspects an element.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-LineStyle">
+          <span class="domain-dot">Overlay.</span>LineStyle
+          
+          <a href="#type-LineStyle"
+             class="permalink"
+             data-slug="Overlay.LineStyle"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Style information for drawing a line.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          color
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The color of the line (default: transparent)</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          pattern
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The line pattern (default: solid)</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>dashed</code>, <code>dotted</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
