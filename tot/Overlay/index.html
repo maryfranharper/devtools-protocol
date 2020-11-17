@@ -195,6 +195,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-setShowFlexOverlays"><span class="domain-dot">Overlay.</span>setShowFlexOverlays</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-setShowFPSCounter"><span class="domain-dot">Overlay.</span>setShowFPSCounter</a>
         
       </div>
@@ -263,6 +268,11 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-FlexContainerHighlightConfig"><span class="domain-dot">Overlay.</span>FlexContainerHighlightConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-FlexNodeHighlightConfig"><span class="domain-dot">Overlay.</span>FlexNodeHighlightConfig</a>
         
       </div>
       
@@ -1241,6 +1251,46 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setShowFlexOverlays">
+          <span class="domain-dot">Overlay.</span>setShowFlexOverlays
+          
+          <a href="#method-setShowFlexOverlays"
+             class="permalink"
+             data-slug="Overlay.setShowFlexOverlays"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          flexNodeHighlightConfigs
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Overlay/#type-FlexNodeHighlightConfig class="param-type">FlexNodeHighlightConfig</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>An array of node identifiers and descriptors for the highlight appearance.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setShowFPSCounter">
           <span class="domain-dot">Overlay.</span>setShowFPSCounter
           
@@ -1805,6 +1855,61 @@ user manually inspects an element.</p>
           
       <div class="details-description">
         <p>The style of the separator between items</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-FlexNodeHighlightConfig">
+          <span class="domain-dot">Overlay.</span>FlexNodeHighlightConfig
+          
+          <a href="#type-FlexNodeHighlightConfig"
+             class="permalink"
+             data-slug="Overlay.FlexNodeHighlightConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          flexContainerHighlightConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-FlexContainerHighlightConfig class="param-type">FlexContainerHighlightConfig</a>
+          
+      <div class="details-description">
+        <p>A descriptor for the highlight appearance of flex containers.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node to highlight.</p>
 
         
       </div>
