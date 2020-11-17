@@ -161,6 +161,11 @@ execution will stop on these operations as if there was a regular breakpoint set
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-setBreakOnCSPViolation"><span class="domain-dot">DOMDebugger.</span>setBreakOnCSPViolation</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-setInstrumentationBreakpoint"><span class="domain-dot">DOMDebugger.</span>setInstrumentationBreakpoint</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -175,6 +180,11 @@ execution will stop on these operations as if there was a regular breakpoint set
       <div class="toc-link">
         <a class="monospace" href="#type-EventListener"><span class="domain-dot">DOMDebugger.</span>EventListener</a>
         
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-CSPViolationType"><span class="domain-dot">DOMDebugger.</span>CSPViolationType</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       </div>
@@ -625,6 +635,47 @@ EventTarget.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setBreakOnCSPViolation">
+          <span class="domain-dot">DOMDebugger.</span>setBreakOnCSPViolation
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-setBreakOnCSPViolation"
+             class="permalink"
+             data-slug="DOMDebugger.setBreakOnCSPViolation"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets breakpoint on particular CSP violations.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          violationTypes
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMDebugger/#type-CSPViolationType class="param-type">CSPViolationType</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>CSP Violations to stop upon.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setInstrumentationBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>setInstrumentationBreakpoint
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -868,6 +919,29 @@ EventTarget.</p>
       
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSPViolationType">
+          <span class="domain-dot">DOMDebugger.</span>CSPViolationType
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-CSPViolationType"
+             class="permalink"
+             data-slug="DOMDebugger.CSPViolationType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSP Violation type.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>trustedtype-sink-violation</code>, <code>trustedtype-policy-violation</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
