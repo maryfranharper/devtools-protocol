@@ -538,6 +538,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-ClientSecurityState"><span class="domain-dot">Network.</span>ClientSecurityState</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-CookieBlockedReason"><span class="domain-dot">Network.</span>CookieBlockedReason</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -573,12 +578,22 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-IPAddressSpace"><span class="domain-dot">Network.</span>IPAddressSpace</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-LoadNetworkResourceOptions"><span class="domain-dot">Network.</span>LoadNetworkResourceOptions</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
         <a class="monospace" href="#type-LoadNetworkResourcePageResult"><span class="domain-dot">Network.</span>LoadNetworkResourcePageResult</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-PrivateNetworkRequestPolicy"><span class="domain-dot">Network.</span>PrivateNetworkRequestPolicy</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
@@ -3932,6 +3947,21 @@ the request and the ones not sent; the latter are distinguished by having blocke
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          clientSecurityState
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ClientSecurityState class="param-type">ClientSecurityState</a>
+          
+      <div class="details-description">
+        <p>The client security state set for the request.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
       </dl>
     
         
@@ -7132,6 +7162,73 @@ errors.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-ClientSecurityState">
+          <span class="domain-dot">Network.</span>ClientSecurityState
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-ClientSecurityState"
+             class="permalink"
+             data-slug="Network.ClientSecurityState"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          initiatorIsSecureContext
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          initiatorIPAddressSpace
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-IPAddressSpace class="param-type">IPAddressSpace</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          privateNetworkRequestPolicy
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-PrivateNetworkRequestPolicy class="param-type">PrivateNetworkRequestPolicy</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-CookieBlockedReason">
           <span class="domain-dot">Network.</span>CookieBlockedReason
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -7409,6 +7506,28 @@ sent. Response will intercept after the response is received.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-IPAddressSpace">
+          <span class="domain-dot">Network.</span>IPAddressSpace
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-IPAddressSpace"
+             class="permalink"
+             data-slug="Network.IPAddressSpace"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>Local</code>, <code>Private</code>, <code>Public</code>, <code>Unknown</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-LoadNetworkResourceOptions">
           <span class="domain-dot">Network.</span>LoadNetworkResourceOptions
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -7573,6 +7692,28 @@ CORB and streaming.</p>
       
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PrivateNetworkRequestPolicy">
+          <span class="domain-dot">Network.</span>PrivateNetworkRequestPolicy
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-PrivateNetworkRequestPolicy"
+             class="permalink"
+             data-slug="Network.PrivateNetworkRequestPolicy"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>Allow</code>, <code>BlockFromInsecureToMorePrivate</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
