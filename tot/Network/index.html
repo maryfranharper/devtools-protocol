@@ -347,6 +347,16 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#event-webTransportClosed"><span class="domain-dot">Network.</span>webTransportClosed</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-webTransportCreated"><span class="domain-dot">Network.</span>webTransportCreated</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#event-requestWillBeSentExtraInfo"><span class="domain-dot">Network.</span>requestWillBeSentExtraInfo</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -3865,6 +3875,117 @@ continueInterceptedRequest call.</p>
           
       <div class="details-description">
         <p>WebSocket request data.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webTransportClosed">
+          <span class="domain-dot">Network.</span>webTransportClosed
+          
+          <a href="#event-webTransportClosed"
+             class="permalink"
+             data-slug="Network.webTransportClosed"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          transportId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>WebTransport identifier.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webTransportCreated">
+          <span class="domain-dot">Network.</span>webTransportCreated
+          
+          <a href="#event-webTransportCreated"
+             class="permalink"
+             data-slug="Network.webTransportCreated"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired upon WebTransport creation.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          transportId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>WebTransport identifier.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          url
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>WebTransport request URL.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          initiator
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Initiator class="param-type">Initiator</a>
+          
+      <div class="details-description">
+        <p>Request initiator.</p>
 
         
       </div>
