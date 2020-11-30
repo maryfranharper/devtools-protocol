@@ -377,6 +377,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#event-trustTokenOperationDone"><span class="domain-dot">Network.</span>trustTokenOperationDone</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#event-requestIntercepted"><span class="domain-dot">Network.</span>requestIntercepted</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
       </div>
@@ -4294,6 +4299,128 @@ available, such as in the case of HTTP/2 or QUIC.</p>
           
       <div class="details-description">
         <p>Information about the signed exchange response.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-trustTokenOperationDone">
+          <span class="domain-dot">Network.</span>trustTokenOperationDone
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-trustTokenOperationDone"
+             class="permalink"
+             data-slug="Network.trustTokenOperationDone"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired exactly once for each Trust Token operation. Depending on
+the type of the operation and whether the operation succeeded or
+failed, the event is fired before the corresponding request was sent
+or after the response was received.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          status
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Detailed success or error status of the operation.
+&#39;AlreadyExists&#39; also signifies a successful operation, as the result
+of the operation already exists und thus, the operation was abort
+preemptively (e.g. a cache hit).</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>Ok</code>, <code>InvalidArgument</code>, <code>FailedPrecondition</code>, <code>ResourceExhausted</code>, <code>AlreadyExists</code>, <code>Unavailable</code>, <code>BadResponse</code>, <code>InternalError</code>, <code>UnknownError</code>, <code>FulfilledLocally</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          type
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TrustTokenOperationType class="param-type">TrustTokenOperationType</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          topLevelOrigin
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Top level origin. The context in which the operation was attempted.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          issuerOrigin
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Origin of the issuer in case of a &quot;Issuance&quot; or &quot;Redemption&quot; operation.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          issuedTokenCount
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The number of obtained Trust Tokens on a successful &quot;Issuance&quot; operation.</p>
 
         
       </div>
