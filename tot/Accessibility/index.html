@@ -129,6 +129,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-getChildAXNodes"><span class="domain-dot">Accessibility.</span>getChildAXNodes</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-getFullAXTree"><span class="domain-dot">Accessibility.</span>getFullAXTree</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -245,6 +250,66 @@ This turns on accessibility for the page, which can impact performance until acc
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-getChildAXNodes">
+          <span class="domain-dot">Accessibility.</span>getChildAXNodes
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getChildAXNodes"
+             class="permalink"
+             data-slug="Accessibility.getChildAXNodes"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fetches a particular accessibility node by AXNodeId.
+Requires <code>enable()</code> to have been called previously.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          id
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Accessibility/#type-AXNodeId class="param-type">AXNodeId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXNode class="param-type">AXNode</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-getFullAXTree">
           <span class="domain-dot">Accessibility.</span>getFullAXTree
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -255,13 +320,34 @@ This turns on accessibility for the page, which can impact performance until acc
         </h4>
         
       <div class="details-description">
-        <p>Fetches the entire accessibility tree</p>
+        <p>Fetches the entire accessibility tree for the root Document</p>
 
         
       </div>
     
         
         
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          max_depth
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The maximum depth at which descendants of the root node should be retrieved.
+If omitted, the full tree is returned.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
