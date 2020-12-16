@@ -242,6 +242,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-SharedArrayBufferTransferIssueDetails"><span class="domain-dot">Audits.</span>SharedArrayBufferTransferIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-SourceCodeLocation"><span class="domain-dot">Audits.</span>SourceCodeLocation</a>
         
       </div>
@@ -1088,7 +1093,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferTransferIssue</code></div>
     
       </div>
     
@@ -1181,6 +1186,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-ContentSecurityPolicyIssueDetails class="param-type">ContentSecurityPolicyIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sharedArrayBufferTransferIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-SharedArrayBufferTransferIssueDetails class="param-type">SharedArrayBufferTransferIssueDetails</a>
           
       <div class="details-description">
         
@@ -1549,6 +1568,62 @@ may be used by the front-end as additional context.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SharedArrayBufferTransferIssueDetails">
+          <span class="domain-dot">Audits.</span>SharedArrayBufferTransferIssueDetails
+          
+          <a href="#type-SharedArrayBufferTransferIssueDetails"
+             class="permalink"
+             data-slug="Audits.SharedArrayBufferTransferIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Details for a request that has been blocked with the BLOCKED_BY_RESPONSE
+code. Currently only used for COEP/COOP, but may be extended to include
+some CSP errors in the future.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          sourceCodeLocation
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-SourceCodeLocation class="param-type">SourceCodeLocation</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          isWarning
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
