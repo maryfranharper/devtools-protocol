@@ -138,6 +138,16 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-LayoutShift"><span class="domain-dot">PerformanceTimeline.</span>LayoutShift</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-LayoutShiftAttribution"><span class="domain-dot">PerformanceTimeline.</span>LayoutShiftAttribution</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-TimelineEvent"><span class="domain-dot">PerformanceTimeline.</span>TimelineEvent</a>
         
       </div>
@@ -160,9 +170,6 @@
         
       <div class="details-description">
         <p>Previously buffered events would be reported before method returns.
-The specified filter overrides any previous filters, passing empty
-filter disables recording.
-Note that not all types exposed to the web platform are currently supported.
 See also: timelineEventAdded</p>
 
         
@@ -180,7 +187,12 @@ See also: timelineEventAdded</p>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
-        
+        <p>The types of event to report, as specified in
+<a href="https://w3c.github.io/performance-timeline/#dom-performanceentry-entrytype">https://w3c.github.io/performance-timeline/#dom-performanceentry-entrytype</a>
+The specified filter overrides any previous filters, passing empty
+filter disables recording.
+Note that not all types exposed to the web platform are currently supported.</p>
+
         
       </div>
     
@@ -269,7 +281,7 @@ See also: timelineEventAdded</p>
           renderTime
         </dt>
         <dd>
-          <span class="param-type">number</span>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
           
       <div class="details-description">
         
@@ -283,7 +295,7 @@ See also: timelineEventAdded</p>
           loadTime
         </dt>
         <dd>
-          <span class="param-type">number</span>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
           
       <div class="details-description">
         
@@ -358,6 +370,156 @@ See also: timelineEventAdded</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-LayoutShift">
+          <span class="domain-dot">PerformanceTimeline.</span>LayoutShift
+          
+          <a href="#type-LayoutShift"
+             class="permalink"
+             data-slug="PerformanceTimeline.LayoutShift"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>See <a href="https://wicg.github.io/layout-instability/#sec-layout-shift">https://wicg.github.io/layout-instability/#sec-layout-shift</a> and layout_shift.idl</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          value
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Score increment produced by this event.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          hadRecentInput
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          lastInputTime
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          sources
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/PerformanceTimeline/#type-LayoutShiftAttribution class="param-type">LayoutShiftAttribution</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-LayoutShiftAttribution">
+          <span class="domain-dot">PerformanceTimeline.</span>LayoutShiftAttribution
+          
+          <a href="#type-LayoutShiftAttribution"
+             class="permalink"
+             data-slug="PerformanceTimeline.LayoutShiftAttribution"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          previousRect
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          currentRect
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-TimelineEvent">
           <span class="domain-dot">PerformanceTimeline.</span>TimelineEvent
           
@@ -399,7 +561,9 @@ See also: timelineEventAdded</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        
+        <p>The event type, as specified in <a href="https://w3c.github.io/performance-timeline/#dom-performanceentry-entrytype">https://w3c.github.io/performance-timeline/#dom-performanceentry-entrytype</a>
+This determines which of the optional &quot;details&quot; fiedls is present.</p>
+
         
       </div>
     
@@ -413,7 +577,8 @@ See also: timelineEventAdded</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        
+        <p>Name may be empty depending on the type.</p>
+
         
       </div>
     
@@ -455,6 +620,20 @@ See also: timelineEventAdded</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/PerformanceTimeline/#type-LargestContentfulPaint class="param-type">LargestContentfulPaint</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          layoutShiftDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/PerformanceTimeline/#type-LayoutShift class="param-type">LayoutShift</a>
           
       <div class="details-description">
         
