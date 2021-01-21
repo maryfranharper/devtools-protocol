@@ -251,6 +251,16 @@
         
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#type-TrustedWebActivityIssueDetails"><span class="domain-dot">Audits.</span>TrustedWebActivityIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-TwaQualityEnforcementViolationType"><span class="domain-dot">Audits.</span>TwaQualityEnforcementViolationType</a>
+        
+      </div>
+      
       </div>
 
       
@@ -1093,7 +1103,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferTransferIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferTransferIssue</code>, <code>TrustedWebActivityIssue</code></div>
     
       </div>
     
@@ -1200,6 +1210,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-SharedArrayBufferTransferIssueDetails class="param-type">SharedArrayBufferTransferIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          twaQualityEnforcementDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-TrustedWebActivityIssueDetails class="param-type">TrustedWebActivityIssueDetails</a>
           
       <div class="details-description">
         
@@ -1691,6 +1715,128 @@ some CSP errors in the future.</p>
       
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TrustedWebActivityIssueDetails">
+          <span class="domain-dot">Audits.</span>TrustedWebActivityIssueDetails
+          
+          <a href="#type-TrustedWebActivityIssueDetails"
+             class="permalink"
+             data-slug="Audits.TrustedWebActivityIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          url
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The url that triggers the violation.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          violationType
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-TwaQualityEnforcementViolationType class="param-type">TwaQualityEnforcementViolationType</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          httpStatusCode
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          packageName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The package name of the Trusted Web Activity client app. This field is
+only used when violation type is kDigitalAssetLinks.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          signature
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The signature of the Trusted Web Activity client app. This field is only
+used when violation type is kDigitalAssetLinks.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TwaQualityEnforcementViolationType">
+          <span class="domain-dot">Audits.</span>TwaQualityEnforcementViolationType
+          
+          <a href="#type-TwaQualityEnforcementViolationType"
+             class="permalink"
+             data-slug="Audits.TwaQualityEnforcementViolationType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>kHttpError</code>, <code>kUnavailableOffline</code>, <code>kDigitalAssetLinks</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
