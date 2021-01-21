@@ -164,6 +164,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-getTrustTokens"><span class="domain-dot">Storage.</span>getTrustTokens</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-overrideQuotaForOrigin"><span class="domain-dot">Storage.</span>overrideQuotaForOrigin</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -198,6 +203,11 @@
       <div class="toc-link">
         <a class="monospace" href="#type-UsageForType"><span class="domain-dot">Storage.</span>UsageForType</a>
         
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-TrustTokens"><span class="domain-dot">Storage.</span>TrustTokens</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       </div>
@@ -691,6 +701,47 @@
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-getTrustTokens">
+          <span class="domain-dot">Storage.</span>getTrustTokens
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getTrustTokens"
+             class="permalink"
+             data-slug="Storage.getTrustTokens"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the number of stored Trust Tokens per issuer for the
+current browsing context.</p>
+
+        
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          tokens
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Storage/#type-TrustTokens class="param-type">TrustTokens</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-overrideQuotaForOrigin">
           <span class="domain-dot">Storage.</span>overrideQuotaForOrigin
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1041,6 +1092,61 @@ disabled (called without a quotaSize).</p>
       <div class="details-description">
         <p>Storage usage (bytes).</p>
 
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TrustTokens">
+          <span class="domain-dot">Storage.</span>TrustTokens
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-TrustTokens"
+             class="permalink"
+             data-slug="Storage.TrustTokens"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Pair of issuer origin and number of available (signed, but not used) Trust
+Tokens from that issuer.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          issuerOrigin
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          count
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        
         
       </div>
     
