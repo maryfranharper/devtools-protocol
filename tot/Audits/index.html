@@ -242,7 +242,12 @@
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#type-SharedArrayBufferTransferIssueDetails"><span class="domain-dot">Audits.</span>SharedArrayBufferTransferIssueDetails</a>
+        <a class="monospace" href="#type-SharedArrayBufferIssueDetails"><span class="domain-dot">Audits.</span>SharedArrayBufferIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-SharedArrayBufferIssueType"><span class="domain-dot">Audits.</span>SharedArrayBufferIssueType</a>
         
       </div>
       
@@ -1103,7 +1108,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferTransferIssue</code>, <code>TrustedWebActivityIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code></div>
     
       </div>
     
@@ -1206,10 +1211,10 @@ add a new optional field to this type.</p>
         </dd>
       
         <dt class="param-name monospace optional">
-          sharedArrayBufferTransferIssueDetails
+          sharedArrayBufferIssueDetails
         </dt>
         <dd>
-          <a href=/devtools-protocol/tot/Audits/#type-SharedArrayBufferTransferIssueDetails class="param-type">SharedArrayBufferTransferIssueDetails</a>
+          <a href=/devtools-protocol/tot/Audits/#type-SharedArrayBufferIssueDetails class="param-type">SharedArrayBufferIssueDetails</a>
           
       <div class="details-description">
         
@@ -1596,12 +1601,12 @@ may be used by the front-end as additional context.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-SharedArrayBufferTransferIssueDetails">
-          <span class="domain-dot">Audits.</span>SharedArrayBufferTransferIssueDetails
+        <h4 class="details-name monospace" id="type-SharedArrayBufferIssueDetails">
+          <span class="domain-dot">Audits.</span>SharedArrayBufferIssueDetails
           
-          <a href="#type-SharedArrayBufferTransferIssueDetails"
+          <a href="#type-SharedArrayBufferIssueDetails"
              class="permalink"
-             data-slug="Audits.SharedArrayBufferTransferIssueDetails"
+             data-slug="Audits.SharedArrayBufferIssueDetails"
              title="Double click to copy markdown-formatted URL">#</a>
         </h4>
         
@@ -1646,8 +1651,44 @@ some CSP errors in the future.</p>
           
         </dd>
       
+        <dt class="param-name monospace ">
+          type
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-SharedArrayBufferIssueType class="param-type">SharedArrayBufferIssueType</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SharedArrayBufferIssueType">
+          <span class="domain-dot">Audits.</span>SharedArrayBufferIssueType
+          
+          <a href="#type-SharedArrayBufferIssueType"
+             class="permalink"
+             data-slug="Audits.SharedArrayBufferIssueType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>TransferIssue</code>, <code>CreationIssue</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
