@@ -120,6 +120,11 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
+        <a class="monospace" href="#method-checkContrast"><span class="domain-dot">Audits.</span>checkContrast</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-disable"><span class="domain-dot">Audits.</span>disable</a>
         
       </div>
@@ -207,6 +212,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-LowTextContrastIssueDetails"><span class="domain-dot">Audits.</span>LowTextContrastIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-MixedContentIssueDetails"><span class="domain-dot">Audits.</span>MixedContentIssueDetails</a>
         
       </div>
@@ -272,6 +282,28 @@
       <h3 id="methods">Methods</h3>
       <div>
         
+      <div class="details">
+        <h4 class="details-name monospace" id="method-checkContrast">
+          <span class="domain-dot">Audits.</span>checkContrast
+          
+          <a href="#method-checkContrast"
+             class="permalink"
+             data-slug="Audits.checkContrast"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Runs the contrast check for the target page. Found issues are reported
+using Audits.issueAdded event.</p>
+
+        
+      </div>
+    
+        
+        
+        
+      </div>
+    
       <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">Audits.</span>disable
@@ -1108,7 +1140,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code></div>
     
       </div>
     
@@ -1229,6 +1261,143 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-TrustedWebActivityIssueDetails class="param-type">TrustedWebActivityIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          lowTextContrastIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-LowTextContrastIssueDetails class="param-type">LowTextContrastIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-LowTextContrastIssueDetails">
+          <span class="domain-dot">Audits.</span>LowTextContrastIssueDetails
+          
+          <a href="#type-LowTextContrastIssueDetails"
+             class="permalink"
+             data-slug="Audits.LowTextContrastIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          violatingNodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          violatingNodeSelector
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          contrastRatio
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          thresholdAA
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          thresholdAAA
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          fontSize
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          fontWeight
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
           
       <div class="details-description">
         
