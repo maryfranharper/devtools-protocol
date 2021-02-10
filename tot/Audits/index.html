@@ -182,6 +182,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-CorsIssueDetails"><span class="domain-dot">Audits.</span>CorsIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-HeavyAdIssueDetails"><span class="domain-dot">Audits.</span>HeavyAdIssueDetails</a>
         
       </div>
@@ -957,6 +962,103 @@ refinements of the net error BLOCKED_BY_RESPONSE.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-CorsIssueDetails">
+          <span class="domain-dot">Audits.</span>CorsIssueDetails
+          
+          <a href="#type-CorsIssueDetails"
+             class="permalink"
+             data-slug="Audits.CorsIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Details for a CORS related issue, e.g. a warning or error related to
+CORS RFC1918 enforcement.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          corsErrorStatus
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CorsErrorStatus class="param-type">Network.CorsErrorStatus</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          isWarning
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          request
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedRequest class="param-type">AffectedRequest</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          resourceIPAddressSpace
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-IPAddressSpace class="param-type">Network.IPAddressSpace</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          clientSecurityState
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ClientSecurityState class="param-type">Network.ClientSecurityState</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-HeavyAdIssueDetails">
           <span class="domain-dot">Audits.</span>HeavyAdIssueDetails
           
@@ -1140,7 +1242,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code></div>
     
       </div>
     
@@ -1275,6 +1377,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-LowTextContrastIssueDetails class="param-type">LowTextContrastIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          corsIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-CorsIssueDetails class="param-type">CorsIssueDetails</a>
           
       <div class="details-description">
         
@@ -1780,9 +1896,8 @@ may be used by the front-end as additional context.</p>
         </h4>
         
       <div class="details-description">
-        <p>Details for a request that has been blocked with the BLOCKED_BY_RESPONSE
-code. Currently only used for COEP/COOP, but may be extended to include
-some CSP errors in the future.</p>
+        <p>Details for a issue arising from an SAB being instantiated in, or
+transfered to a context that is not cross-origin isolated.</p>
 
         
       </div>
