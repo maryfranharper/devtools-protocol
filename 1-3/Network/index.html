@@ -1098,7 +1098,7 @@ the URLs of the page and all of its subframes.</p>
           
       <div class="details-description">
         <p>The request-URI to associate with the setting of the cookie. This value can affect the
-default domain and path values of the created cookie.</p>
+default domain, path, source port, and source scheme values of the created cookie.</p>
 
         
       </div>
@@ -1204,6 +1204,53 @@ default domain and path values of the created cookie.</p>
           
       <div class="details-description">
         <p>Cookie Priority type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sameParty
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is SameParty.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourceScheme
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/1-3/Network/#type-CookieSourceScheme class="param-type">CookieSourceScheme</a>
+          
+      <div class="details-description">
+        <p>Cookie source scheme type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourcePort
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+This is a temporary ability and it will be removed in the future.</p>
 
         
       </div>
@@ -3220,6 +3267,38 @@ default domain and path values of the created cookie.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
+        <dt class="param-name monospace ">
+          sourceScheme
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/1-3/Network/#type-CookieSourceScheme class="param-type">CookieSourceScheme</a>
+          
+      <div class="details-description">
+        <p>Cookie source scheme type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace ">
+          sourcePort
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+This is a temporary ability and it will be removed in the future.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -3284,7 +3363,7 @@ default domain and path values of the created cookie.</p>
           
       <div class="details-description">
         <p>The request-URI to associate with the setting of the cookie. This value can affect the
-default domain and path values of the created cookie.</p>
+default domain, path, source port, and source scheme values of the created cookie.</p>
 
         
       </div>
@@ -3390,6 +3469,53 @@ default domain and path values of the created cookie.</p>
           
       <div class="details-description">
         <p>Cookie Priority.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sameParty
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is SameParty.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourceScheme
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/1-3/Network/#type-CookieSourceScheme class="param-type">CookieSourceScheme</a>
+          
+      <div class="details-description">
+        <p>Cookie source scheme type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourcePort
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+This is a temporary ability and it will be removed in the future.</p>
 
         
       </div>

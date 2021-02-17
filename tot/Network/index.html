@@ -573,6 +573,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-CookieSourceScheme"><span class="domain-dot">Network.</span>CookieSourceScheme</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-CrossOriginEmbedderPolicyStatus"><span class="domain-dot">Network.</span>CrossOriginEmbedderPolicyStatus</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -1338,7 +1343,7 @@ the URLs of the page and all of its subframes.</p>
           
       <div class="details-description">
         <p>The request-URI to associate with the setting of the cookie. This value can affect the
-default domain and path values of the created cookie.</p>
+default domain, path, source port, and source scheme values of the created cookie.</p>
 
         
       </div>
@@ -1444,6 +1449,53 @@ default domain and path values of the created cookie.</p>
           
       <div class="details-description">
         <p>Cookie Priority type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sameParty
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is SameParty.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourceScheme
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookieSourceScheme class="param-type">CookieSourceScheme</a>
+          
+      <div class="details-description">
+        <p>Cookie source scheme type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourcePort
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+This is a temporary ability and it will be removed in the future.</p>
 
         
       </div>
@@ -5118,6 +5170,38 @@ this requestId will be the same as the requestId present in the requestWillBeSen
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
+        <dt class="param-name monospace ">
+          sourceScheme
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookieSourceScheme class="param-type">CookieSourceScheme</a>
+          
+      <div class="details-description">
+        <p>Cookie source scheme type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace ">
+          sourcePort
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+This is a temporary ability and it will be removed in the future.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -5182,7 +5266,7 @@ this requestId will be the same as the requestId present in the requestWillBeSen
           
       <div class="details-description">
         <p>The request-URI to associate with the setting of the cookie. This value can affect the
-default domain and path values of the created cookie.</p>
+default domain, path, source port, and source scheme values of the created cookie.</p>
 
         
       </div>
@@ -5288,6 +5372,53 @@ default domain and path values of the created cookie.</p>
           
       <div class="details-description">
         <p>Cookie Priority.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sameParty
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is SameParty.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourceScheme
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookieSourceScheme class="param-type">CookieSourceScheme</a>
+          
+      <div class="details-description">
+        <p>Cookie source scheme type.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          sourcePort
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+This is a temporary ability and it will be removed in the future.</p>
 
         
       </div>
@@ -7653,6 +7784,31 @@ errors.</p>
 
         
       <div class="enum-container">Allowed Values: <code>Low</code>, <code>Medium</code>, <code>High</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CookieSourceScheme">
+          <span class="domain-dot">Network.</span>CookieSourceScheme
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-CookieSourceScheme"
+             class="permalink"
+             data-slug="Network.CookieSourceScheme"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Represents the source scheme of the origin that originally set the cookie.
+A value of &quot;Unset&quot; allows protocol clients to emulate legacy cookie scope for the scheme.
+This is a temporary ability and it will be removed in the future.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>Unset</code>, <code>NonSecure</code>, <code>Secure</code></div>
     
       </div>
     
