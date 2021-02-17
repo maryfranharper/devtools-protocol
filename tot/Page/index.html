@@ -265,6 +265,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-getPermissionsPolicyState"><span class="domain-dot">Page.</span>getPermissionsPolicyState</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-getResourceContent"><span class="domain-dot">Page.</span>getResourceContent</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -628,6 +633,26 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-InstallabilityErrorArgument"><span class="domain-dot">Page.</span>InstallabilityErrorArgument</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-PermissionsPolicyBlockLocator"><span class="domain-dot">Page.</span>PermissionsPolicyBlockLocator</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-PermissionsPolicyBlockReason"><span class="domain-dot">Page.</span>PermissionsPolicyBlockReason</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-PermissionsPolicyFeature"><span class="domain-dot">Page.</span>PermissionsPolicyFeature</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-PermissionsPolicyFeatureState"><span class="domain-dot">Page.</span>PermissionsPolicyFeatureState</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
@@ -2415,6 +2440,65 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
         </dt>
         <dd>
           <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getPermissionsPolicyState">
+          <span class="domain-dot">Page.</span>getPermissionsPolicyState
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getPermissionsPolicyState"
+             class="permalink"
+             data-slug="Page.getPermissionsPolicyState"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Get Permissions Policy state on given frame.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          states
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-PermissionsPolicyFeatureState class="param-type">PermissionsPolicyFeatureState</a> ]</span></span>
           
       <div class="details-description">
         
@@ -6843,6 +6927,173 @@ Example URLs: <a href="http://www.google.com/file.html">http://www.google.com/fi
       <div class="details-description">
         <p>Argument value (e.g. value:&#39;64&#39;).</p>
 
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PermissionsPolicyBlockLocator">
+          <span class="domain-dot">Page.</span>PermissionsPolicyBlockLocator
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-PermissionsPolicyBlockLocator"
+             class="permalink"
+             data-slug="Page.PermissionsPolicyBlockLocator"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          blockReason
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-PermissionsPolicyBlockReason class="param-type">PermissionsPolicyBlockReason</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PermissionsPolicyBlockReason">
+          <span class="domain-dot">Page.</span>PermissionsPolicyBlockReason
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-PermissionsPolicyBlockReason"
+             class="permalink"
+             data-slug="Page.PermissionsPolicyBlockReason"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Reason for a permissions policy feature to be disabled.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>Header</code>, <code>IframeAttribute</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PermissionsPolicyFeature">
+          <span class="domain-dot">Page.</span>PermissionsPolicyFeature
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-PermissionsPolicyFeature"
+             class="permalink"
+             data-slug="Page.PermissionsPolicyFeature"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>All Permissions Policy features. This enum should match the one defined
+in renderer/core/feature_policy/feature_policy_features.json5.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>accelerometer</code>, <code>ambient-light-sensor</code>, <code>autoplay</code>, <code>camera</code>, <code>ch-dpr</code>, <code>ch-device-memory</code>, <code>ch-downlink</code>, <code>ch-ect</code>, <code>ch-lang</code>, <code>ch-rtt</code>, <code>ch-ua</code>, <code>ch-ua-arch</code>, <code>ch-ua-platform</code>, <code>ch-ua-model</code>, <code>ch-ua-mobile</code>, <code>ch-ua-full-version</code>, <code>ch-ua-platform-version</code>, <code>ch-viewport-width</code>, <code>ch-width</code>, <code>clipboard-read</code>, <code>clipboard-write</code>, <code>conversion-measurement</code>, <code>cross-origin-isolated</code>, <code>display-capture</code>, <code>document-domain</code>, <code>encrypted-media</code>, <code>execution-while-out-of-viewport</code>, <code>execution-while-not-rendered</code>, <code>focus-without-user-activation</code>, <code>fullscreen</code>, <code>frobulate</code>, <code>gamepad</code>, <code>geolocation</code>, <code>gyroscope</code>, <code>hid</code>, <code>idle-detection</code>, <code>interest-cohort</code>, <code>magnetometer</code>, <code>microphone</code>, <code>midi</code>, <code>otp-credentials</code>, <code>payment</code>, <code>picture-in-picture</code>, <code>publickey-credentials-get</code>, <code>screen-wake-lock</code>, <code>serial</code>, <code>storage-access-api</code>, <code>sync-xhr</code>, <code>trust-token-redemption</code>, <code>usb</code>, <code>vertical-scroll</code>, <code>web-share</code>, <code>xr-spatial-tracking</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PermissionsPolicyFeatureState">
+          <span class="domain-dot">Page.</span>PermissionsPolicyFeatureState
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-PermissionsPolicyFeatureState"
+             class="permalink"
+             data-slug="Page.PermissionsPolicyFeatureState"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          feature
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-PermissionsPolicyFeature class="param-type">PermissionsPolicyFeature</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          allowed
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          locator
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-PermissionsPolicyBlockLocator class="param-type">PermissionsPolicyBlockLocator</a>
+          
+      <div class="details-description">
+        
         
       </div>
     
