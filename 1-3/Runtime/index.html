@@ -912,7 +912,10 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
           
       <div class="details-description">
         <p>Specifies in which execution context to perform evaluation. If the parameter is omitted the
-evaluation will be performed in the context of the inspected page.</p>
+evaluation will be performed in the context of the inspected page.
+This is mutually exclusive with <code>uniqueContextId</code>, which offers an
+alternative way to identify the execution context that is more reliable
+in a multi-process environment.</p>
 
         
       </div>
@@ -1055,6 +1058,26 @@ Note that <code>let</code> variables can only be re-declared if they originate f
 which includes eval(), Function(), setTimeout() and setInterval()
 when called with non-callable arguments. This flag bypasses CSP for this
 evaluation and allows unsafe-eval. Defaults to true.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          uniqueContextId
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>An alternative way to specify the execution context to evaluate in.
+Compared to contextId that may be reused accross processes, this is guaranteed to be
+system-unique, so it can be used to prevent accidental evaluation of the expression
+in context different than intended (e.g. as a result of navigation accross process
+boundaries).
+This is mutually exclusive with <code>contextId</code>.</p>
 
         
       </div>
@@ -2525,6 +2548,23 @@ script evaluation should be performed.</p>
           
         </dd>
       
+        <dt class="param-name monospace ">
+          uniqueId
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>A system-unique execution context identifier. Unlike the id, this is unique accross
+multiple processes, so can be reliably used to identify specific context while backend
+performs a cross-process navigation.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
         <dt class="param-name monospace optional">
           auxData
         </dt>
@@ -2833,7 +2873,7 @@ object.</p>
         <p>Object type.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>object</code>, <code>function</code>, <code>undefined</code>, <code>string</code>, <code>number</code>, <code>boolean</code>, <code>symbol</code>, <code>bigint</code>, <code>wasm</code></div>
+      <div class="enum-container">Allowed Values: <code>object</code>, <code>function</code>, <code>undefined</code>, <code>string</code>, <code>number</code>, <code>boolean</code>, <code>symbol</code>, <code>bigint</code></div>
     
       </div>
     
@@ -2847,10 +2887,12 @@ object.</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Object subtype hint. Specified for <code>object</code> or <code>wasm</code> type values only.</p>
+        <p>Object subtype hint. Specified for <code>object</code> type values only.
+NOTE: If you change anything here, make sure to also update
+<code>subtype</code> in <code>ObjectPreview</code> and <code>PropertyPreview</code> below.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code>, <code>proxy</code>, <code>promise</code>, <code>typedarray</code>, <code>arraybuffer</code>, <code>dataview</code>, <code>i32</code>, <code>i64</code>, <code>f32</code>, <code>f64</code>, <code>v128</code>, <code>externref</code></div>
+      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code>, <code>proxy</code>, <code>promise</code>, <code>typedarray</code>, <code>arraybuffer</code>, <code>dataview</code>, <code>webassemblymemory</code>, <code>wasmvalue</code></div>
     
       </div>
     

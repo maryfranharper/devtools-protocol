@@ -987,7 +987,10 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
           
       <div class="details-description">
         <p>Specifies in which execution context to perform evaluation. If the parameter is omitted the
-evaluation will be performed in the context of the inspected page.</p>
+evaluation will be performed in the context of the inspected page.
+This is mutually exclusive with <code>uniqueContextId</code>, which offers an
+alternative way to identify the execution context that is more reliable
+in a multi-process environment.</p>
 
         
       </div>
@@ -1130,6 +1133,26 @@ Note that <code>let</code> variables can only be re-declared if they originate f
 which includes eval(), Function(), setTimeout() and setInterval()
 when called with non-callable arguments. This flag bypasses CSP for this
 evaluation and allows unsafe-eval. Defaults to true.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          uniqueContextId
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>An alternative way to specify the execution context to evaluate in.
+Compared to contextId that may be reused accross processes, this is guaranteed to be
+system-unique, so it can be used to prevent accidental evaluation of the expression
+in context different than intended (e.g. as a result of navigation accross process
+boundaries).
+This is mutually exclusive with <code>contextId</code>.</p>
 
         
       </div>
@@ -1809,8 +1832,6 @@ call stacks (default).</p>
         <p>If executionContextId is empty, adds binding with the given name on the
 global objects of all inspected contexts, including those created later,
 bindings survive reloads.
-If executionContextId is specified, adds binding only on global object of
-given execution context.
 Binding function takes exactly one argument, this argument should be string,
 in case of any other input, function throws an exception.
 Each binding function call produces Runtime.bindingCalled notification.</p>
@@ -1844,11 +1865,34 @@ Each binding function call produces Runtime.bindingCalled notification.</p>
           <a href=/devtools-protocol/tot/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
       <div class="details-description">
-        
+        <p>If specified, the binding would only be exposed to the specified
+execution context. If omitted and <code>executionContextName</code> is not set,
+the binding is exposed to all execution contexts of the target.
+This parameter is mutually exclusive with <code>executionContextName</code>.</p>
+
         
       </div>
     
           
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          executionContextName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If specified, the binding is exposed to the executionContext with
+matching name, even for contexts created after the binding is added.
+See also <code>ExecutionContext.name</code> and <code>worldName</code> parameter to
+<code>Page.addScriptToEvaluateOnNewDocument</code>.
+This parameter is mutually exclusive with <code>executionContextId</code>.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
       </dl>
@@ -2969,6 +3013,23 @@ script evaluation should be performed.</p>
           
         </dd>
       
+        <dt class="param-name monospace ">
+          uniqueId
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>A system-unique execution context identifier. Unlike the id, this is unique accross
+multiple processes, so can be reliably used to identify specific context while backend
+performs a cross-process navigation.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
         <dt class="param-name monospace optional">
           auxData
         </dt>
@@ -3277,7 +3338,7 @@ object.</p>
         <p>Object type.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>object</code>, <code>function</code>, <code>undefined</code>, <code>string</code>, <code>number</code>, <code>boolean</code>, <code>symbol</code>, <code>bigint</code>, <code>wasm</code></div>
+      <div class="enum-container">Allowed Values: <code>object</code>, <code>function</code>, <code>undefined</code>, <code>string</code>, <code>number</code>, <code>boolean</code>, <code>symbol</code>, <code>bigint</code></div>
     
       </div>
     
@@ -3291,10 +3352,12 @@ object.</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Object subtype hint. Specified for <code>object</code> or <code>wasm</code> type values only.</p>
+        <p>Object subtype hint. Specified for <code>object</code> type values only.
+NOTE: If you change anything here, make sure to also update
+<code>subtype</code> in <code>ObjectPreview</code> and <code>PropertyPreview</code> below.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code>, <code>proxy</code>, <code>promise</code>, <code>typedarray</code>, <code>arraybuffer</code>, <code>dataview</code>, <code>i32</code>, <code>i64</code>, <code>f32</code>, <code>f64</code>, <code>v128</code>, <code>externref</code></div>
+      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code>, <code>proxy</code>, <code>promise</code>, <code>typedarray</code>, <code>arraybuffer</code>, <code>dataview</code>, <code>webassemblymemory</code>, <code>wasmvalue</code></div>
     
       </div>
     
@@ -3765,7 +3828,7 @@ The result value is json ML array.</p>
         <p>Object subtype hint. Specified for <code>object</code> type values only.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code></div>
+      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code>, <code>proxy</code>, <code>promise</code>, <code>typedarray</code>, <code>arraybuffer</code>, <code>dataview</code>, <code>webassemblymemory</code>, <code>wasmvalue</code></div>
     
       </div>
     
@@ -4017,7 +4080,7 @@ or <code>undefined</code> if there is no setter (accessor descriptors only).</p>
         <p>Object subtype hint. Specified for <code>object</code> type values only.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code></div>
+      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code>, <code>proxy</code>, <code>promise</code>, <code>typedarray</code>, <code>arraybuffer</code>, <code>dataview</code>, <code>webassemblymemory</code>, <code>wasmvalue</code></div>
     
       </div>
     

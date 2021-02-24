@@ -241,11 +241,6 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#method-executeWasmEvaluator"><span class="domain-dot">Debugger.</span>executeWasmEvaluator</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
         <a class="monospace" href="#method-getStackTrace"><span class="domain-dot">Debugger.</span>getStackTrace</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -2075,112 +2070,6 @@ before next pause.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-executeWasmEvaluator">
-          <span class="domain-dot">Debugger.</span>executeWasmEvaluator
-          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-          <a href="#method-executeWasmEvaluator"
-             class="permalink"
-             data-slug="Debugger.executeWasmEvaluator"
-             title="Double click to copy markdown-formatted URL">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Execute a Wasm Evaluator module on a given call frame.</p>
-
-        
-      </div>
-    
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace ">
-          callFrameId
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
-          
-      <div class="details-description">
-        <p>WebAssembly call frame identifier to evaluate on.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace ">
-          evaluator
-        </dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Code of the evaluator module. (Encoded as a base64 string when passed over JSON)</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          timeout
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-TimeDelta class="param-type">Runtime.TimeDelta</a>
-          
-      <div class="details-description">
-        <p>Terminate execution after timing out (number of milliseconds).</p>
-
-        
-      </div>
-    
-          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace ">
-          result
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
-          
-      <div class="details-description">
-        <p>Object wrapper for the evaluation result.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          exceptionDetails
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-ExceptionDetails class="param-type">Runtime.ExceptionDetails</a>
-          
-      <div class="details-description">
-        <p>Exception details.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-getStackTrace">
           <span class="domain-dot">Debugger.</span>getStackTrace
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -2608,7 +2497,7 @@ stop on the breakpoint if this expression evaluates to true.</p>
         <p>Pause reason.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>ambiguous</code>, <code>assert</code>, <code>debugCommand</code>, <code>DOM</code>, <code>EventListener</code>, <code>exception</code>, <code>instrumentation</code>, <code>OOM</code>, <code>other</code>, <code>promiseRejection</code>, <code>XHR</code></div>
+      <div class="enum-container">Allowed Values: <code>ambiguous</code>, <code>assert</code>, <code>CSPViolation</code>, <code>debugCommand</code>, <code>DOM</code>, <code>EventListener</code>, <code>exception</code>, <code>instrumentation</code>, <code>OOM</code>, <code>other</code>, <code>promiseRejection</code>, <code>XHR</code></div>
     
       </div>
     
