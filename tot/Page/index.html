@@ -511,11 +511,6 @@
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#event-historyNavigationOutcomeReported"><span class="domain-dot">Page.</span>historyNavigationOutcomeReported</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
         <a class="monospace" href="#event-navigatedWithinDocument"><span class="domain-dot">Page.</span>navigatedWithinDocument</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -5305,79 +5300,6 @@ Navigation may still be cancelled after the event is issued.</p>
           
       <div class="details-description">
         <p>Id of the frame that has stopped loading.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="event-historyNavigationOutcomeReported">
-          <span class="domain-dot">Page.</span>historyNavigationOutcomeReported
-          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-          <a href="#event-historyNavigationOutcomeReported"
-             class="permalink"
-             data-slug="Page.historyNavigationOutcomeReported"
-             title="Double click to copy markdown-formatted URL">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Fired for all history navigations if BackForwardCache feature is enabled. Do not assume
-any ordering with the Page.frameNavigated event. This event is fired only for main-frame
-history navigation where the document changes (non-same-document navigations).</p>
-
-        
-      </div>
-    
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace ">
-          requestId
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">Network.RequestId</a>
-          
-      <div class="details-description">
-        <p>The request id of the associated navigation.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace ">
-          frameId
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
-          
-      <div class="details-description">
-        <p>The frame id of the associated frame.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace ">
-          isRestoredFromBackForwardCache
-        </dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>Indicates whether the frame is restored from BackForwardCache.</p>
 
         
       </div>
