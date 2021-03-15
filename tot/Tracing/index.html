@@ -185,6 +185,11 @@
         
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#type-TracingBackend"><span class="domain-dot">Tracing.</span>TracingBackend</a>
+        
+      </div>
+      
       </div>
 
       
@@ -525,6 +530,21 @@ transfer mode (defaults to <code>none</code>)</p>
         <p>Base64-encoded serialized perfetto.protos.TraceConfig protobuf message
 When specified, the parameters <code>categories</code>, <code>options</code>, <code>traceConfig</code>
 are ignored. (Encoded as a base64 string when passed over JSON)</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          tracingBackend
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-TracingBackend class="param-type">TracingBackend</a>
+          
+      <div class="details-description">
+        <p>Backend type (defaults to <code>auto</code>)</p>
 
         
       </div>
@@ -987,6 +1007,33 @@ protocol buffer format. Note that the JSON format will be deprecated soon.</p>
       
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TracingBackend">
+          <span class="domain-dot">Tracing.</span>TracingBackend
+          
+          <a href="#type-TracingBackend"
+             class="permalink"
+             data-slug="Tracing.TracingBackend"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Backend type to use for tracing. <code>chrome</code> uses the Chrome-integrated
+tracing service and is supported on all platforms. <code>system</code> is only
+supported on Chrome OS and uses the Perfetto system tracing service.
+<code>auto</code> chooses <code>system</code> when the perfettoConfig provided to Tracing.start
+specifies at least one non-Chrome data source; otherwise uses <code>chrome</code>.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>auto</code>, <code>chrome</code>, <code>system</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
