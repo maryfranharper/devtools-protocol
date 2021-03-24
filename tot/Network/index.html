@@ -211,6 +211,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-clearAcceptedEncodingsOverride"><span class="domain-dot">Network.</span>clearAcceptedEncodingsOverride</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-getCertificate"><span class="domain-dot">Network.</span>getCertificate</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -237,6 +242,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       
       <div class="toc-link">
         <a class="monospace" href="#method-searchInResponseBody"><span class="domain-dot">Network.</span>searchInResponseBody</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setAcceptedEncodings"><span class="domain-dot">Network.</span>setAcceptedEncodings</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
@@ -559,6 +569,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       
       <div class="toc-link">
         <a class="monospace" href="#type-ClientSecurityState"><span class="domain-dot">Network.</span>ClientSecurityState</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-ContentEncoding"><span class="domain-dot">Network.</span>ContentEncoding</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
@@ -1820,6 +1835,27 @@ This is a temporary ability and it will be removed in the future.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-clearAcceptedEncodingsOverride">
+          <span class="domain-dot">Network.</span>clearAcceptedEncodingsOverride
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-clearAcceptedEncodingsOverride"
+             class="permalink"
+             data-slug="Network.clearAcceptedEncodingsOverride"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Clears accepted encodings set by setAcceptedEncodings</p>
+
+        
+      </div>
+    
+        
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-getCertificate">
           <span class="domain-dot">Network.</span>getCertificate
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -2252,6 +2288,47 @@ attribute, user, password.</p>
       
       </dl>
     
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setAcceptedEncodings">
+          <span class="domain-dot">Network.</span>setAcceptedEncodings
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-setAcceptedEncodings"
+             class="permalink"
+             data-slug="Network.setAcceptedEncodings"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets a list of content encodings that will be accepted. Empty list means no encoding is accepted.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          encodings
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Network/#type-ContentEncoding class="param-type">ContentEncoding</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>List of accepted content encodings.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
       </div>
     
       <div class="details">
@@ -7742,6 +7819,29 @@ errors.</p>
       
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ContentEncoding">
+          <span class="domain-dot">Network.</span>ContentEncoding
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-ContentEncoding"
+             class="permalink"
+             data-slug="Network.ContentEncoding"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>List of content encodings supported by the backend.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>deflate</code>, <code>gzip</code>, <code>br</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
