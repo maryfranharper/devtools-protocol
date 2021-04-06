@@ -139,6 +139,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-dispatchDragEvent"><span class="domain-dot">Input.</span>dispatchDragEvent</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-emulateTouchFromMouseEvent"><span class="domain-dot">Input.</span>emulateTouchFromMouseEvent</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -178,6 +183,16 @@
       <div class="toc-link">
         <a class="monospace" href="#type-TouchPoint"><span class="domain-dot">Input.</span>TouchPoint</a>
         
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-DragData"><span class="domain-dot">Input.</span>DragData</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-DragDataItem"><span class="domain-dot">Input.</span>DragDataItem</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
@@ -845,6 +860,110 @@ one by one.</p>
           
       <div class="details-description">
         <p>Ignores input events processing when set to true.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-dispatchDragEvent">
+          <span class="domain-dot">Input.</span>dispatchDragEvent
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-dispatchDragEvent"
+             class="permalink"
+             data-slug="Input.dispatchDragEvent"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Dispatches a drag event into the page.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          type
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Type of the drag event.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>dragEnter</code>, <code>dragOver</code>, <code>drop</code>, <code>dragCancel</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          x
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>X coordinate of the event relative to the main frame&#39;s viewport in CSS pixels.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          y
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Y coordinate of the event relative to the main frame&#39;s viewport in CSS pixels. 0 refers to
+the top of the viewport and Y increases as it proceeds towards the bottom of the viewport.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          data
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Input/#type-DragData class="param-type">DragData</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          modifiers
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8
+(default: 0).</p>
 
         
       </div>
@@ -1705,6 +1824,147 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
       <div class="details-description">
         <p>Identifier used to track touch sources between events, must be unique within an event.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-DragData">
+          <span class="domain-dot">Input.</span>DragData
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-DragData"
+             class="permalink"
+             data-slug="Input.DragData"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          items
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Input/#type-DragDataItem class="param-type">DragDataItem</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          dragOperationsMask
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Bit field representing allowed drag operations. Copy = 1, Link = 2, Move = 16</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-DragDataItem">
+          <span class="domain-dot">Input.</span>DragDataItem
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-DragDataItem"
+             class="permalink"
+             data-slug="Input.DragDataItem"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          mimeType
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Mime type of the dragged data.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          data
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Depending of the value of <code>mimeType</code>, it contains the dragged link,
+text, HTML markup or any other data.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          title
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Title associated with a link. Only valid when <code>mimeType</code> == &quot;text/uri-list&quot;.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          baseURL
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Stores the base URL for the contained markup. Only valid when <code>mimeType</code>
+== &quot;text/html&quot;.</p>
 
         
       </div>
