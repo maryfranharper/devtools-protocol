@@ -204,7 +204,17 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
-        
+        <h3>Events</h3>
+      <div class="toc-link">
+        <a class="monospace" href="#event-downloadProgress"><span class="domain-dot">Browser.</span>downloadProgress</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-downloadWillBegin"><span class="domain-dot">Browser.</span>downloadWillBegin</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
         <h3>Types</h3>
       <div class="toc-link">
         <a class="monospace" href="#type-Bounds"><span class="domain-dot">Browser.</span>Bounds</a>
@@ -1094,6 +1104,21 @@ or &#39;allowAndName&#39;.</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          eventsEnabled
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to emit download events (defaults to false).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
       </dl>
     
         
@@ -1245,6 +1270,185 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       </div>
     
       
+      <h3 id="events">Events</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="event-downloadProgress">
+          <span class="domain-dot">Browser.</span>downloadProgress
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-downloadProgress"
+             class="permalink"
+             data-slug="Browser.downloadProgress"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when download makes progress. Last call has |done| == true.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          guid
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Global unique identifier of the download.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          totalBytes
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Total expected bytes to download.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          receivedBytes
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Total bytes received.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          state
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Download status.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>inProgress</code>, <code>completed</code>, <code>canceled</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-downloadWillBegin">
+          <span class="domain-dot">Browser.</span>downloadWillBegin
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-downloadWillBegin"
+             class="permalink"
+             data-slug="Browser.downloadWillBegin"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when page is about to start a download.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Id of the frame that caused the download to begin.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          guid
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Global unique identifier of the download.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          url
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of the resource being downloaded.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          suggestedFilename
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Suggested file name of the resource (the actual name of the file saved on disk may differ).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      </div>
+    
       
       <h3 id="types">Types</h3>
       <div>
