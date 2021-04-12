@@ -291,6 +291,40 @@ flattened.</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          includeBlendedBackgroundColors
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to include blended background colors in the snapshot (default: false).
+Blended background color is achieved by blending background colors of all elements
+that overlap with the current element.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          includeTextColorOpacities
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to include text color opacity in the snapshot (default: false).
+An element might have the opacity property set that affects the text color of the element.
+The final text color opacity is computed based on the opacity of all overlapping elements.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -1646,6 +1680,36 @@ captureSnapshot was true.</p>
       </div>
     
           
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          blendedBackgroundColors
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>The list of background colors that are blended with colors of overlapping elements.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          textColorOpacities
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <span class="param-type">number</span> ]</span></span>
+          
+      <div class="details-description">
+        <p>The list of computed text opacities.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
       </dl>
