@@ -162,6 +162,16 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-AttributionReportingIssueDetails"><span class="domain-dot">Audits.</span>AttributionReportingIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-AttributionReportingIssueType"><span class="domain-dot">Audits.</span>AttributionReportingIssueType</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-BlockedByResponseIssueDetails"><span class="domain-dot">Audits.</span>BlockedByResponseIssueDetails</a>
         
       </div>
@@ -727,6 +737,111 @@ applies to images.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-AttributionReportingIssueDetails">
+          <span class="domain-dot">Audits.</span>AttributionReportingIssueDetails
+          
+          <a href="#type-AttributionReportingIssueDetails"
+             class="permalink"
+             data-slug="Audits.AttributionReportingIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Details for issues around &quot;Attribution Reporting API&quot; usage.
+Explainer: <a href="https://github.com/WICG/conversion-measurement-api">https://github.com/WICG/conversion-measurement-api</a></p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          violationType
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AttributionReportingIssueType class="param-type">AttributionReportingIssueType</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          frame
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedFrame class="param-type">AffectedFrame</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          request
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedRequest class="param-type">AffectedRequest</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          violatingNodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-AttributionReportingIssueType">
+          <span class="domain-dot">Audits.</span>AttributionReportingIssueType
+          
+          <a href="#type-AttributionReportingIssueType"
+             class="permalink"
+             data-slug="Audits.AttributionReportingIssueType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>PermissionPolicyDisabled</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-BlockedByResponseIssueDetails">
           <span class="domain-dot">Audits.</span>BlockedByResponseIssueDetails
           
@@ -1276,7 +1391,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code>, <code>AttributionReportingIssue</code></div>
     
       </div>
     
@@ -1425,6 +1540,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-CorsIssueDetails class="param-type">CorsIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          attributionReportingIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AttributionReportingIssueDetails class="param-type">AttributionReportingIssueDetails</a>
           
       <div class="details-description">
         
