@@ -657,6 +657,36 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-OriginTrial"><span class="domain-dot">Page.</span>OriginTrial</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-OriginTrialStatus"><span class="domain-dot">Page.</span>OriginTrialStatus</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-OriginTrialToken"><span class="domain-dot">Page.</span>OriginTrialToken</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-OriginTrialTokenStatus"><span class="domain-dot">Page.</span>OriginTrialTokenStatus</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-OriginTrialTokenWithStatus"><span class="domain-dot">Page.</span>OriginTrialTokenWithStatus</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-OriginTrialUsageRestriction"><span class="domain-dot">Page.</span>OriginTrialUsageRestriction</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-PermissionsPolicyBlockLocator"><span class="domain-dot">Page.</span>PermissionsPolicyBlockLocator</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -5930,6 +5960,21 @@ Example URLs: <a href="http://www.google.com/file.html">http://www.google.com/fi
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
+        <dt class="param-name monospace optional">
+          originTrials
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-OriginTrial class="param-type">OriginTrial</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Frame document&#39;s origin trials with at least one token present.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -7215,6 +7260,320 @@ Example URLs: <a href="http://www.google.com/file.html">http://www.google.com/fi
 
         
       <div class="enum-container">Allowed Values: <code>Navigation</code>, <code>BackForwardCacheRestore</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-OriginTrial">
+          <span class="domain-dot">Page.</span>OriginTrial
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-OriginTrial"
+             class="permalink"
+             data-slug="Page.OriginTrial"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          trialName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          status
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-OriginTrialStatus class="param-type">OriginTrialStatus</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          tokensWithStatus
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-OriginTrialTokenWithStatus class="param-type">OriginTrialTokenWithStatus</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-OriginTrialStatus">
+          <span class="domain-dot">Page.</span>OriginTrialStatus
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-OriginTrialStatus"
+             class="permalink"
+             data-slug="Page.OriginTrialStatus"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Status for an Origin Trial.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>Enabled</code>, <code>ValidTokenNotProvided</code>, <code>OSNotSupported</code>, <code>TrialNotAllowed</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-OriginTrialToken">
+          <span class="domain-dot">Page.</span>OriginTrialToken
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-OriginTrialToken"
+             class="permalink"
+             data-slug="Page.OriginTrialToken"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          origin
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          matchSubDomains
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          trialName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          expiryTime
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          isThirdParty
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          usageRestriction
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-OriginTrialUsageRestriction class="param-type">OriginTrialUsageRestriction</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-OriginTrialTokenStatus">
+          <span class="domain-dot">Page.</span>OriginTrialTokenStatus
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-OriginTrialTokenStatus"
+             class="permalink"
+             data-slug="Page.OriginTrialTokenStatus"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Origin Trial(<a href="https://www.chromium.org/blink/origin-trials">https://www.chromium.org/blink/origin-trials</a>) support.
+Status for an Origin Trial token.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>Success</code>, <code>NotSupported</code>, <code>Insecure</code>, <code>Expired</code>, <code>WrongOrigin</code>, <code>InvalidSignature</code>, <code>Malformed</code>, <code>WrongVersion</code>, <code>FeatureDisabled</code>, <code>TokenDisabled</code>, <code>FeatureDisabledForUser</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-OriginTrialTokenWithStatus">
+          <span class="domain-dot">Page.</span>OriginTrialTokenWithStatus
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-OriginTrialTokenWithStatus"
+             class="permalink"
+             data-slug="Page.OriginTrialTokenWithStatus"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          rawTokenText
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          parsedToken
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-OriginTrialToken class="param-type">OriginTrialToken</a>
+          
+      <div class="details-description">
+        <p><code>parsedToken</code> is present only when the token is extractable and
+parsable.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          status
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-OriginTrialTokenStatus class="param-type">OriginTrialTokenStatus</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-OriginTrialUsageRestriction">
+          <span class="domain-dot">Page.</span>OriginTrialUsageRestriction
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-OriginTrialUsageRestriction"
+             class="permalink"
+             data-slug="Page.OriginTrialUsageRestriction"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>None</code>, <code>Subset</code></div>
     
       </div>
     
