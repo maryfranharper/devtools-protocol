@@ -247,6 +247,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-NavigatorUserAgentIssueDetails"><span class="domain-dot">Audits.</span>NavigatorUserAgentIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-QuirksModeIssueDetails"><span class="domain-dot">Audits.</span>QuirksModeIssueDetails</a>
         
       </div>
@@ -1424,7 +1429,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code>, <code>AttributionReportingIssue</code>, <code>QuirksModeIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code>, <code>AttributionReportingIssue</code>, <code>QuirksModeIssue</code>, <code>NavigatorUserAgentIssue</code></div>
     
       </div>
     
@@ -1601,6 +1606,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-QuirksModeIssueDetails class="param-type">QuirksModeIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          navigatorUserAgentIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-NavigatorUserAgentIssueDetails class="param-type">NavigatorUserAgentIssueDetails</a>
           
       <div class="details-description">
         
@@ -1898,6 +1917,59 @@ Does not always exist (e.g. for unsafe form submission urls).</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-NavigatorUserAgentIssueDetails">
+          <span class="domain-dot">Audits.</span>NavigatorUserAgentIssueDetails
+          
+          <a href="#type-NavigatorUserAgentIssueDetails"
+             class="permalink"
+             data-slug="Audits.NavigatorUserAgentIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          url
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          location
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-SourceCodeLocation class="param-type">SourceCodeLocation</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
