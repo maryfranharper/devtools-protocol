@@ -392,6 +392,26 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#event-subresourceWebBundleInnerResponseError"><span class="domain-dot">Network.</span>subresourceWebBundleInnerResponseError</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-subresourceWebBundleInnerResponseParsed"><span class="domain-dot">Network.</span>subresourceWebBundleInnerResponseParsed</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-subresourceWebBundleMetadataError"><span class="domain-dot">Network.</span>subresourceWebBundleMetadataError</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-subresourceWebBundleMetadataReceived"><span class="domain-dot">Network.</span>subresourceWebBundleMetadataReceived</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#event-trustTokenOperationDone"><span class="domain-dot">Network.</span>trustTokenOperationDone</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -4536,6 +4556,281 @@ available, such as in the case of HTTP/2 or QUIC.</p>
           
       <div class="details-description">
         <p>Information about the signed exchange response.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-subresourceWebBundleInnerResponseError">
+          <span class="domain-dot">Network.</span>subresourceWebBundleInnerResponseError
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-subresourceWebBundleInnerResponseError"
+             class="permalink"
+             data-slug="Network.subresourceWebBundleInnerResponseError"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when request for resources within a .wbn file failed.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          innerRequestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier of the subresource request</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          innerRequestURL
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of the subresource resource.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          errorMessage
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Error message</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          bundleRequestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Bundle request identifier. Used to match this information to another event.
+This made be absent in case when the instrumentation was enabled only
+after webbundle was parsed.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-subresourceWebBundleInnerResponseParsed">
+          <span class="domain-dot">Network.</span>subresourceWebBundleInnerResponseParsed
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-subresourceWebBundleInnerResponseParsed"
+             class="permalink"
+             data-slug="Network.subresourceWebBundleInnerResponseParsed"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when handling requests for resources within a .wbn file.
+Note: this will only be fired for resources that are requested by the webpage.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          innerRequestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier of the subresource request</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          innerRequestURL
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of the subresource resource.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          bundleRequestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Bundle request identifier. Used to match this information to another event.
+This made be absent in case when the instrumentation was enabled only
+after webbundle was parsed.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-subresourceWebBundleMetadataError">
+          <span class="domain-dot">Network.</span>subresourceWebBundleMetadataError
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-subresourceWebBundleMetadataError"
+             class="permalink"
+             data-slug="Network.subresourceWebBundleMetadataError"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired once when parsing the .wbn file has failed.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier. Used to match this information to another event.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          errorMessage
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Error message</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-subresourceWebBundleMetadataReceived">
+          <span class="domain-dot">Network.</span>subresourceWebBundleMetadataReceived
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-subresourceWebBundleMetadataReceived"
+             class="permalink"
+             data-slug="Network.subresourceWebBundleMetadataReceived"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired once when parsing the .wbn file has succeeded.
+The event contains the information about the web bundle contents.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier. Used to match this information to another event.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          urls
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
+          
+      <div class="details-description">
+        <p>A list of URLs of resources in the subresource Web Bundle.</p>
 
         
       </div>
