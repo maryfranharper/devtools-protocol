@@ -396,6 +396,11 @@ subsequently load the required stylesheet contents using the <code>getStyleSheet
         
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#type-CSSContainerQuery"><span class="domain-dot">CSS.</span>CSSContainerQuery</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
       </div>
 
       
@@ -2717,6 +2722,22 @@ starting with the innermost one, going outwards.</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          containerQueries
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSContainerQuery class="param-type">CSSContainerQuery</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Container query list array (for rules involving container queries).
+The array enumerates container queries starting with the innermost one, going outwards.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -4226,6 +4247,78 @@ inspector&quot; rules), &quot;regular&quot; for regular stylesheets.</p>
           
       <div class="details-description">
         <p>Value range in the underlying resource (if available).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSContainerQuery">
+          <span class="domain-dot">CSS.</span>CSSContainerQuery
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-CSSContainerQuery"
+             class="permalink"
+             data-slug="CSS.CSSContainerQuery"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS container query rule descriptor.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          text
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Container query text.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          range
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>The associated rule header range in the enclosing stylesheet (if
+available).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          styleSheetId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the stylesheet containing this object (if exists).</p>
 
         
       </div>
