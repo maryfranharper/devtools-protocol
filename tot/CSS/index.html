@@ -235,6 +235,11 @@ subsequently load the required stylesheet contents using the <code>getStyleSheet
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-setContainerQueryText"><span class="domain-dot">CSS.</span>setContainerQueryText</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-setLocalFontsEnabled"><span class="domain-dot">CSS.</span>setLocalFontsEnabled</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -1822,6 +1827,94 @@ instrumentation)</p>
           
       <div class="details-description">
         <p>Monotonically increasing time, in seconds.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setContainerQueryText">
+          <span class="domain-dot">CSS.</span>setContainerQueryText
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-setContainerQueryText"
+             class="permalink"
+             data-slug="CSS.setContainerQueryText"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Modifies the expression of a container query.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          range
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          text
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          containerQuery
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSContainerQuery class="param-type">CSSContainerQuery</a>
+          
+      <div class="details-description">
+        <p>The resulting CSS container query rule after modification.</p>
 
         
       </div>
