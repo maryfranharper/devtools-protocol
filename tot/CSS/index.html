@@ -2996,7 +2996,9 @@ stylesheet rules) this rule came from.</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Stylesheet resource URL.</p>
+        <p>Stylesheet resource URL. Empty if this is a constructed stylesheet created using
+new CSSStyleSheet() (but non-empty if this is a constructed sylesheet imported
+as a CSS module script).</p>
 
         
       </div>
@@ -3134,7 +3136,8 @@ Constructed stylesheets (new CSSStyleSheet()) are mutable immediately after crea
           <span class="param-type">boolean</span>
           
       <div class="details-description">
-        <p>Whether this stylesheet is a constructed stylesheet (created using new CSSStyleSheet()).</p>
+        <p>True if this stylesheet is created through new CSSStyleSheet() or imported as a
+CSS module script.</p>
 
         
       </div>
