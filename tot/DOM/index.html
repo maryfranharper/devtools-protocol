@@ -276,6 +276,11 @@ corresponding document elements as their child nodes.</p></p>
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-getContainerForNode"><span class="domain-dot">DOM.</span>getContainerForNode</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-getContentQuads"><span class="domain-dot">DOM.</span>getContentQuads</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -2533,6 +2538,82 @@ be called for that search.</p>
       </dl>
     
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getContainerForNode">
+          <span class="domain-dot">DOM.</span>getContainerForNode
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getContainerForNode"
+             class="permalink"
+             data-slug="DOM.getContainerForNode"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the container of the given node based on container query conditions.
+If containerName is given, it will find the nearest container with a matching name;
+otherwise it will find the nearest container regardless of its container name.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          containerName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>The container node for the given node, or null if not found.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
       </div>
     
       <div class="details">
