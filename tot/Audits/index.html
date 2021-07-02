@@ -306,6 +306,11 @@
         
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#type-WasmCrossOriginModuleSharingIssueDetails"><span class="domain-dot">Audits.</span>WasmCrossOriginModuleSharingIssueDetails</a>
+        
+      </div>
+      
       </div>
 
       
@@ -1450,7 +1455,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code>, <code>AttributionReportingIssue</code>, <code>QuirksModeIssue</code>, <code>NavigatorUserAgentIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code>, <code>AttributionReportingIssue</code>, <code>QuirksModeIssue</code>, <code>NavigatorUserAgentIssue</code>, <code>WasmCrossOriginModuleSharingIssue</code></div>
     
       </div>
     
@@ -1641,6 +1646,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-NavigatorUserAgentIssueDetails class="param-type">NavigatorUserAgentIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          wasmCrossOriginModuleSharingIssue
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-WasmCrossOriginModuleSharingIssueDetails class="param-type">WasmCrossOriginModuleSharingIssueDetails</a>
           
       <div class="details-description">
         
@@ -2618,6 +2637,87 @@ used when violation type is kDigitalAssetLinks.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-WasmCrossOriginModuleSharingIssueDetails">
+          <span class="domain-dot">Audits.</span>WasmCrossOriginModuleSharingIssueDetails
+          
+          <a href="#type-WasmCrossOriginModuleSharingIssueDetails"
+             class="permalink"
+             data-slug="Audits.WasmCrossOriginModuleSharingIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          wasmModuleUrl
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          sourceOrigin
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          targetOrigin
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          isWarning
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
