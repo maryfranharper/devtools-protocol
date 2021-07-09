@@ -190,6 +190,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-setShowContainerQueryOverlays"><span class="domain-dot">Overlay.</span>setShowContainerQueryOverlays</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-setShowDebugBorders"><span class="domain-dot">Overlay.</span>setShowDebugBorders</a>
         
       </div>
@@ -278,6 +283,16 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-ColorFormat"><span class="domain-dot">Overlay.</span>ColorFormat</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-ContainerQueryContainerHighlightConfig"><span class="domain-dot">Overlay.</span>ContainerQueryContainerHighlightConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-ContainerQueryHighlightConfig"><span class="domain-dot">Overlay.</span>ContainerQueryHighlightConfig</a>
         
       </div>
       
@@ -1245,6 +1260,46 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setShowContainerQueryOverlays">
+          <span class="domain-dot">Overlay.</span>setShowContainerQueryOverlays
+          
+          <a href="#method-setShowContainerQueryOverlays"
+             class="permalink"
+             data-slug="Overlay.setShowContainerQueryOverlays"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          containerQueryHighlightConfigs
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Overlay/#type-ContainerQueryHighlightConfig class="param-type">ContainerQueryHighlightConfig</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>An array of node identifiers and descriptors for the highlight appearance.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setShowDebugBorders">
           <span class="domain-dot">Overlay.</span>setShowDebugBorders
           
@@ -1964,6 +2019,101 @@ user manually inspects an element.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ContainerQueryContainerHighlightConfig">
+          <span class="domain-dot">Overlay.</span>ContainerQueryContainerHighlightConfig
+          
+          <a href="#type-ContainerQueryContainerHighlightConfig"
+             class="permalink"
+             data-slug="Overlay.ContainerQueryContainerHighlightConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          containerBorder
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-LineStyle class="param-type">LineStyle</a>
+          
+      <div class="details-description">
+        <p>The style of the container border</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ContainerQueryHighlightConfig">
+          <span class="domain-dot">Overlay.</span>ContainerQueryHighlightConfig
+          
+          <a href="#type-ContainerQueryHighlightConfig"
+             class="permalink"
+             data-slug="Overlay.ContainerQueryHighlightConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          containerQueryContainerHighlightConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-ContainerQueryContainerHighlightConfig class="param-type">ContainerQueryContainerHighlightConfig</a>
+          
+      <div class="details-description">
+        <p>A descriptor for the highlight appearance of container query containers.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the container node to highlight.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
@@ -2927,6 +3077,21 @@ user manually inspects an element.</p>
           
       <div class="details-description">
         <p>The contrast algorithm to use for the contrast ratio (default: aa).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          containerQueryContainerHighlightConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-ContainerQueryContainerHighlightConfig class="param-type">ContainerQueryContainerHighlightConfig</a>
+          
+      <div class="details-description">
+        <p>The container query container highlight configuration (default: all transparent).</p>
 
         
       </div>
