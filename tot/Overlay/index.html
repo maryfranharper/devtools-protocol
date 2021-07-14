@@ -150,11 +150,6 @@
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#method-highlightFrame"><span class="domain-dot">Overlay.</span>highlightFrame</a>
-        
-      </div>
-      
-      <div class="toc-link">
         <a class="monospace" href="#method-highlightNode"><span class="domain-dot">Overlay.</span>highlightNode</a>
         
       </div>
@@ -252,6 +247,11 @@
       <div class="toc-link">
         <a class="monospace" href="#method-setShowWebVitals"><span class="domain-dot">Overlay.</span>setShowWebVitals</a>
         
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-highlightFrame"><span class="domain-dot">Overlay.</span>highlightFrame</a>
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
       </div>
       
         <h3>Events</h3>
@@ -670,77 +670,6 @@
     
         
         
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-highlightFrame">
-          <span class="domain-dot">Overlay.</span>highlightFrame
-          
-          <a href="#method-highlightFrame"
-             class="permalink"
-             data-slug="Overlay.highlightFrame"
-             title="Double click to copy markdown-formatted URL">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Highlights owner element of the frame with given id.</p>
-
-        
-      </div>
-    
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace ">
-          frameId
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
-          
-      <div class="details-description">
-        <p>Identifier of the frame to highlight.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          contentColor
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
-          
-      <div class="details-description">
-        <p>The content box highlight fill color (default: transparent).</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          contentOutlineColor
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
-          
-      <div class="details-description">
-        <p>The content box highlight outline color (default: transparent).</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
         
       </div>
     
@@ -1777,6 +1706,80 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
           
       <div class="details-description">
         
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-highlightFrame">
+          <span class="domain-dot">Overlay.</span>highlightFrame
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+          <a href="#method-highlightFrame"
+             class="permalink"
+             data-slug="Overlay.highlightFrame"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlights owner element of the frame with given id.
+Deprecated: Doesn&#39;t work reliablity and cannot be fixed due to process
+separatation (the owner node might be in a different process). Determine
+the owner node in the client and use highlightNode.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the frame to highlight.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          contentColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The content box highlight fill color (default: transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          contentOutlineColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The content box highlight outline color (default: transparent).</p>
+
         
       </div>
     
