@@ -149,6 +149,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-imeSetComposition"><span class="domain-dot">Input.</span>imeSetComposition</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-insertText"><span class="domain-dot">Input.</span>insertText</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -1138,6 +1143,109 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
       <div class="details-description">
         <p>Number of times the mouse button was clicked (default: 0).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-imeSetComposition">
+          <span class="domain-dot">Input.</span>imeSetComposition
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-imeSetComposition"
+             class="permalink"
+             data-slug="Input.imeSetComposition"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>This method sets the current candidate text for ime.
+Use imeCommitComposition to commit the final text.
+Use imeSetComposition with empty string as text to cancel composition.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          text
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The text to insert</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          selectionStart
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>selection start</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          selectionEnd
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>selection end</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          replacementStart
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>replacement start</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          replacementEnd
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>replacement end</p>
 
         
       </div>
