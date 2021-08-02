@@ -306,6 +306,11 @@ corresponding document elements as their child nodes.</p></p>
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-getQueryingDescendantsForContainer"><span class="domain-dot">DOM.</span>getQueryingDescendantsForContainer</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-getRelayoutBoundary"><span class="domain-dot">DOM.</span>getRelayoutBoundary</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -2986,6 +2991,68 @@ results (default is false).</p>
           
       <div class="details-description">
         <p>Creation stack trace, if available.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getQueryingDescendantsForContainer">
+          <span class="domain-dot">DOM.</span>getQueryingDescendantsForContainer
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getQueryingDescendantsForContainer"
+             class="permalink"
+             data-slug="DOM.getQueryingDescendantsForContainer"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the descendants of a container query container that have
+container queries against this container.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the container node to find querying descendants from.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodeIds
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Descendant nodes with container queries against the given container.</p>
 
         
       </div>
