@@ -4438,7 +4438,8 @@ established the connection, so we can&#39;t send it in <code>requestWillBeSentEx
           
       <div class="details-description">
         <p>The status code of the response. This is useful in cases the request failed and no responseReceived
-event is triggered, which is the case for, e.g., CORS errors.</p>
+event is triggered, which is the case for, e.g., CORS errors. This is also the correct status code
+for cached requests, where the status in responseReceived is a 200 and this will be 304.</p>
 
         
       </div>
@@ -6802,12 +6803,12 @@ milliseconds relatively to this requestTime.</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>HTTP response headers text.</p>
+        <p>HTTP response headers text. This has been replaced by the headers in Network.responseReceivedExtraInfo.</p>
 
         
       </div>
     
-          
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
         <dt class="param-name monospace ">
@@ -6847,12 +6848,12 @@ milliseconds relatively to this requestTime.</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>HTTP request headers text.</p>
+        <p>HTTP request headers text. This has been replaced by the headers in Network.requestWillBeSentExtraInfo.</p>
 
         
       </div>
     
-          
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
         <dt class="param-name monospace ">
