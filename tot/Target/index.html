@@ -165,6 +165,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-autoAttachRelated"><span class="domain-dot">Target.</span>autoAttachRelated</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-createBrowserContext"><span class="domain-dot">Target.</span>createBrowserContext</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -845,6 +850,65 @@ and crbug.com/991325.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-autoAttachRelated">
+          <span class="domain-dot">Target.</span>autoAttachRelated
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-autoAttachRelated"
+             class="permalink"
+             data-slug="Target.autoAttachRelated"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Adds the specified target to the list of targets that will be monitored for any related target
+creation (such as child frames, child workers and new versions of service worker) and reported
+through <code>attachedToTarget</code>. This cancel the effect of any previous <code>setAutoAttach</code> and is also
+cancelled by subsequent <code>setAutoAttach</code>. Only available at the Browser target.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          waitForDebuggerOnStart
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to pause new targets when attaching to them. Use <code>Runtime.runIfWaitingForDebugger</code>
+to run paused targets.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-createBrowserContext">
           <span class="domain-dot">Target.</span>createBrowserContext
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1152,7 +1216,9 @@ channel with browser target.</p>
       <div class="details-description">
         <p>Controls whether to automatically attach to new targets which are considered to be related to
 this one. When turned on, attaches to all existing related targets as well. When turned off,
-automatically detaches from all currently attached targets.</p>
+automatically detaches from all currently attached targets.
+This also clears all targets added by <code>autoAttachRelated</code> from the list of targets to watch
+for creation of related targets.</p>
 
         
       </div>
