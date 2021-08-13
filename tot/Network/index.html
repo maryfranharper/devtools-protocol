@@ -588,6 +588,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-ConnectTiming"><span class="domain-dot">Network.</span>ConnectTiming</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-ContentEncoding"><span class="domain-dot">Network.</span>ContentEncoding</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -4252,6 +4257,21 @@ the request and the ones not sent; the latter are distinguished by having blocke
       </div>
     
           
+        </dd>
+      
+        <dt class="param-name monospace ">
+          connectTiming
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ConnectTiming class="param-type">ConnectTiming</a>
+          
+      <div class="details-description">
+        <p>Connection timing information for the request.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
         <dt class="param-name monospace optional">
@@ -8079,6 +8099,48 @@ errors.</p>
           
       <div class="details-description">
         
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ConnectTiming">
+          <span class="domain-dot">Network.</span>ConnectTiming
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-ConnectTiming"
+             class="permalink"
+             data-slug="Network.ConnectTiming"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          requestTime
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Timing&#39;s requestTime is a baseline in seconds, while the other numbers are ticks in
+milliseconds relatively to this requestTime. Matches ResourceTiming&#39;s requestTime for
+the same request (but not for redirected requests).</p>
+
         
       </div>
     
