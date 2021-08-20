@@ -159,6 +159,11 @@
         
       </div>
       
+      <div class="toc-link">
+        <a class="monospace" href="#method-continueResponse"><span class="domain-dot">Fetch.</span>continueResponse</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
         <h3>Events</h3>
       <div class="toc-link">
         <a class="monospace" href="#event-authRequired"><span class="domain-dot">Fetch.</span>authRequired</a>
@@ -607,7 +612,9 @@ over the protocol as text. (Encoded as a base64 string when passed over JSON)</p
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>A response body. (Encoded as a base64 string when passed over JSON)</p>
+        <p>A response body. If absent, original response body will be used if
+the request is intercepted at the response stage and empty body
+will be used if the request is intercepted at the request stage. (Encoded as a base64 string when passed over JSON)</p>
 
         
       </div>
@@ -783,6 +790,113 @@ domain before body is received results in an undefined behavior.</p>
       
       </dl>
     
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-continueResponse">
+          <span class="domain-dot">Fetch.</span>continueResponse
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-continueResponse"
+             class="permalink"
+             data-slug="Fetch.continueResponse"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Continues loading of the paused response, optionally modifying the
+response headers. If either responseCode or headers are modified, all of them
+must be present.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>An id the client received in requestPaused event.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          responseCode
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>An HTTP response code. If absent, original response code will be used.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          responsePhrase
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>A textual representation of responseCode.
+If absent, a standard phrase matching responseCode is used.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          responseHeaders
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Fetch/#type-HeaderEntry class="param-type">HeaderEntry</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Response headers. If absent, original response headers will be used.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          binaryResponseHeaders
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Alternative way of specifying response headers as a \0-separated
+series of name: value pairs. Prefer the above method unless you
+need to represent some non-UTF8 values that can&#39;t be transmitted
+over the protocol as text. (Encoded as a base64 string when passed over JSON)</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
       </div>
     
       </div>
