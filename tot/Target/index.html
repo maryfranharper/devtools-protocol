@@ -862,8 +862,9 @@ and crbug.com/991325.</p>
       <div class="details-description">
         <p>Adds the specified target to the list of targets that will be monitored for any related target
 creation (such as child frames, child workers and new versions of service worker) and reported
-through <code>attachedToTarget</code>. This cancel the effect of any previous <code>setAutoAttach</code> and is also
-cancelled by subsequent <code>setAutoAttach</code>. Only available at the Browser target.</p>
+through <code>attachedToTarget</code>. The specified target is also auto-attached.
+This cancels the effect of any previous <code>setAutoAttach</code> and is also cancelled by subsequent
+<code>setAutoAttach</code>. Only available at the Browser target.</p>
 
         
       </div>
