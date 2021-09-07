@@ -377,6 +377,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#event-reportingApiReportUpdated"><span class="domain-dot">Network.</span>reportingApiReportUpdated</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#event-requestWillBeSentExtraInfo"><span class="domain-dot">Network.</span>requestWillBeSentExtraInfo</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -4270,6 +4275,45 @@ continueInterceptedRequest call.</p>
         <p>Is sent whenever a new report is added.
 And after &#39;enableReportingApi&#39; for all existing reports.</p>
 
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          report
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ReportingApiReport class="param-type">ReportingApiReport</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-reportingApiReportUpdated">
+          <span class="domain-dot">Network.</span>reportingApiReportUpdated
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-reportingApiReportUpdated"
+             class="permalink"
+             data-slug="Network.reportingApiReportUpdated"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
         
       </div>
     
@@ -8928,10 +8972,39 @@ CORB and streaming.</p>
         </dd>
       
         <dt class="param-name monospace ">
+          completedAttempts
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The number of delivery attempts made so far, not including an active attempt.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
           body
         </dt>
         <dd>
           <span class="param-type">object</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          status
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ReportStatus class="param-type">ReportStatus</a>
           
       <div class="details-description">
         
