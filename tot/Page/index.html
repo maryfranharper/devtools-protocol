@@ -2532,7 +2532,8 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
         </h4>
         
       <div class="details-description">
-        <p>Returns the unique (PWA) app id.</p>
+        <p>Returns the unique (PWA) app id.
+Only returns values if the feature flag &#39;WebAppEnableManifestId&#39; is enabled</p>
 
         
       </div>
@@ -2550,7 +2551,22 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Only returns a value if the feature flag &#39;WebAppEnableManifestId&#39; is enabled</p>
+        <p>App id, either from manifest&#39;s id attribute or computed from start_url</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          recommendedId
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Recommendation for manifest&#39;s id attribute to match current id computed from start_url</p>
 
         
       </div>
