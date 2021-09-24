@@ -197,6 +197,16 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-GenericIssueDetails"><span class="domain-dot">Audits.</span>GenericIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-GenericIssueErrorType"><span class="domain-dot">Audits.</span>GenericIssueErrorType</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-HeavyAdIssueDetails"><span class="domain-dot">Audits.</span>HeavyAdIssueDetails</a>
         
       </div>
@@ -1256,6 +1266,83 @@ CORS RFC1918 enforcement.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-GenericIssueDetails">
+          <span class="domain-dot">Audits.</span>GenericIssueDetails
+          
+          <a href="#type-GenericIssueDetails"
+             class="permalink"
+             data-slug="Audits.GenericIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Depending on the concrete errorType, different properties are set.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          errorType
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-GenericIssueErrorType class="param-type">GenericIssueErrorType</a>
+          
+      <div class="details-description">
+        <p>Issues with the same errorType are aggregated in the frontend.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          frameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-GenericIssueErrorType">
+          <span class="domain-dot">Audits.</span>GenericIssueErrorType
+          
+          <a href="#type-GenericIssueErrorType"
+             class="permalink"
+             data-slug="Audits.GenericIssueErrorType"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>CrossOriginPortalPostMessageError</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-HeavyAdIssueDetails">
           <span class="domain-dot">Audits.</span>HeavyAdIssueDetails
           
@@ -1455,7 +1542,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code>, <code>AttributionReportingIssue</code>, <code>QuirksModeIssue</code>, <code>NavigatorUserAgentIssue</code>, <code>WasmCrossOriginModuleSharingIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code>, <code>SharedArrayBufferIssue</code>, <code>TrustedWebActivityIssue</code>, <code>LowTextContrastIssue</code>, <code>CorsIssue</code>, <code>AttributionReportingIssue</code>, <code>QuirksModeIssue</code>, <code>NavigatorUserAgentIssue</code>, <code>WasmCrossOriginModuleSharingIssue</code>, <code>GenericIssue</code></div>
     
       </div>
     
@@ -1660,6 +1747,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-WasmCrossOriginModuleSharingIssueDetails class="param-type">WasmCrossOriginModuleSharingIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          genericIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-GenericIssueDetails class="param-type">GenericIssueDetails</a>
           
       <div class="details-description">
         
