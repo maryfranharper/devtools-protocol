@@ -220,6 +220,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-setShowIsolatedElements"><span class="domain-dot">Overlay.</span>setShowIsolatedElements</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-setShowLayoutShiftRegions"><span class="domain-dot">Overlay.</span>setShowLayoutShiftRegions</a>
         
       </div>
@@ -338,6 +343,16 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-InspectMode"><span class="domain-dot">Overlay.</span>InspectMode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-IsolatedElementHighlightConfig"><span class="domain-dot">Overlay.</span>IsolatedElementHighlightConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-IsolationModeHighlightConfig"><span class="domain-dot">Overlay.</span>IsolationModeHighlightConfig</a>
         
       </div>
       
@@ -1461,6 +1476,47 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
           
       <div class="details-description">
         <p>True for showing hit-test borders</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowIsolatedElements">
+          <span class="domain-dot">Overlay.</span>setShowIsolatedElements
+          
+          <a href="#method-setShowIsolatedElements"
+             class="permalink"
+             data-slug="Overlay.setShowIsolatedElements"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Show elements in isolation mode with overlays.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          isolatedElementHighlightConfigs
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Overlay/#type-IsolatedElementHighlightConfig class="param-type">IsolatedElementHighlightConfig</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>An array of node identifiers and descriptors for the highlight appearance.</p>
 
         
       </div>
@@ -3212,6 +3268,131 @@ user manually inspects an element.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-IsolatedElementHighlightConfig">
+          <span class="domain-dot">Overlay.</span>IsolatedElementHighlightConfig
+          
+          <a href="#type-IsolatedElementHighlightConfig"
+             class="permalink"
+             data-slug="Overlay.IsolatedElementHighlightConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          isolationModeHighlightConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-IsolationModeHighlightConfig class="param-type">IsolationModeHighlightConfig</a>
+          
+      <div class="details-description">
+        <p>A descriptor for the highlight appearance of an element in isolation mode.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the isolated element to highlight.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-IsolationModeHighlightConfig">
+          <span class="domain-dot">Overlay.</span>IsolationModeHighlightConfig
+          
+          <a href="#type-IsolationModeHighlightConfig"
+             class="permalink"
+             data-slug="Overlay.IsolationModeHighlightConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          resizerColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The fill color of the resizers (default: transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          resizerHandleColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The fill color for resizer handles (default: transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          maskColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The fill color for the mask covering non-isolated elements (default: transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
