@@ -161,11 +161,6 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#method-restartFrame"><span class="domain-dot">Debugger.</span>restartFrame</a>
-        
-      </div>
-      
-      <div class="toc-link">
         <a class="monospace" href="#method-resume"><span class="domain-dot">Debugger.</span>resume</a>
         
       </div>
@@ -237,6 +232,11 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       
       <div class="toc-link">
         <a class="monospace" href="#method-getWasmBytecode"><span class="domain-dot">Debugger.</span>getWasmBytecode</a>
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-restartFrame"><span class="domain-dot">Debugger.</span>restartFrame</a>
         <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
       </div>
       
@@ -466,7 +466,7 @@ enabled until the result for this command is received.</p>
           
       <div class="details-description">
         <p>The maximum size in bytes of collected scripts (not referenced by other heap objects)
-the debugger can hold. Puts no limit if paramter is omitted.</p>
+the debugger can hold. Puts no limit if parameter is omitted.</p>
 
         
       </div>
@@ -926,97 +926,6 @@ of scripts is used as end of range.</p>
       </dl>
     
         
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-restartFrame">
-          <span class="domain-dot">Debugger.</span>restartFrame
-          
-          <a href="#method-restartFrame"
-             class="permalink"
-             data-slug="Debugger.restartFrame"
-             title="Double click to copy markdown-formatted URL">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Restarts particular call frame from the beginning.</p>
-
-        
-      </div>
-    
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace ">
-          callFrameId
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
-          
-      <div class="details-description">
-        <p>Call frame identifier to evaluate on.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace ">
-          callFrames
-        </dt>
-        <dd>
-          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-CallFrame class="param-type">CallFrame</a> ]</span></span>
-          
-      <div class="details-description">
-        <p>New stack trace.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          asyncStackTrace
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
-          
-      <div class="details-description">
-        <p>Async stack trace, if any.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          asyncStackTraceId
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
-          
-      <div class="details-description">
-        <p>Async stack trace, if any.</p>
-
-        
-      </div>
-    
-          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        </dd>
-      
-      </dl>
-    
       </div>
     
       <div class="details">
@@ -2063,6 +1972,97 @@ before next pause.</p>
       </div>
     
           
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-restartFrame">
+          <span class="domain-dot">Debugger.</span>restartFrame
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+          <a href="#method-restartFrame"
+             class="permalink"
+             data-slug="Debugger.restartFrame"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Restarts particular call frame from the beginning.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          callFrameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
+          
+      <div class="details-description">
+        <p>Call frame identifier to evaluate on.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          callFrames
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-CallFrame class="param-type">CallFrame</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>New stack trace.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          asyncStackTrace
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
+          
+      <div class="details-description">
+        <p>Async stack trace, if any.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          asyncStackTraceId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
+          
+      <div class="details-description">
+        <p>Async stack trace, if any.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
       </dl>

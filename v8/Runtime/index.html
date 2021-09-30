@@ -670,6 +670,21 @@ specified and objectId is, objectGroup will be inherited from object.</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          throwOnSideEffect
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to throw an exception if side effect cannot be ruled out during evaluation.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -1148,9 +1163,9 @@ evaluation and allows unsafe-eval. Defaults to true.</p>
           
       <div class="details-description">
         <p>An alternative way to specify the execution context to evaluate in.
-Compared to contextId that may be reused accross processes, this is guaranteed to be
+Compared to contextId that may be reused across processes, this is guaranteed to be
 system-unique, so it can be used to prevent accidental evaluation of the expression
-in context different than intended (e.g. as a result of navigation accross process
+in context different than intended (e.g. as a result of navigation across process
 boundaries).
 This is mutually exclusive with <code>contextId</code>.</p>
 
@@ -1277,6 +1292,21 @@ returned either.</p>
           
       <div class="details-description">
         <p>Whether preview should be generated for the results.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          nonIndexedPropertiesOnly
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>If true, returns non-indexed properties only.</p>
 
         
       </div>
@@ -1868,12 +1898,15 @@ Each binding function call produces Runtime.bindingCalled notification.</p>
         <p>If specified, the binding would only be exposed to the specified
 execution context. If omitted and <code>executionContextName</code> is not set,
 the binding is exposed to all execution contexts of the target.
-This parameter is mutually exclusive with <code>executionContextName</code>.</p>
+This parameter is mutually exclusive with <code>executionContextName</code>.
+Deprecated in favor of <code>executionContextName</code> due to an unclear use case
+and bugs in implementation (crbug.com/1169639). <code>executionContextId</code> will be
+removed in the future.</p>
 
         
       </div>
     
-          
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
         <dt class="param-name monospace optional">
@@ -2531,6 +2564,21 @@ call).</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          executionContextId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/v8/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the context where the call was made.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -2941,6 +2989,23 @@ execution.</p>
           
         </dd>
       
+        <dt class="param-name monospace optional">
+          exceptionMetaData
+        </dt>
+        <dd>
+          <span class="param-type">object</span>
+          
+      <div class="details-description">
+        <p>Dictionary with entries of meta data that the client associated
+with this exception, such as information about associated network
+requests, etc.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -3020,7 +3085,7 @@ script evaluation should be performed.</p>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>A system-unique execution context identifier. Unlike the id, this is unique accross
+        <p>A system-unique execution context identifier. Unlike the id, this is unique across
 multiple processes, so can be reliably used to identify specific context while backend
 performs a cross-process navigation.</p>
 
